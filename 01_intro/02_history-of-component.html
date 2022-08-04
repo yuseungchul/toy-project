@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        // 2013년 리액트가 처음 등장했을 때 컴포넌트를 유일하게 만드는 방법은
+        // createClass 함수를 사용하는 것이였으나 리액트 16(2017년 9월)부터
+        // 공식적으로 사용 금지 되었다.
+
+        // const HelloWorldText = React.createClass({
+        //     displayName : 'helloworld',
+        //     render () {
+        //         return React.createElement(
+        //             'h1',
+        //             { className : 'greeting'},
+        //             'Hello World!'
+        //         );
+        //     }
+        // });
+
+        // ES6에 클래스 문법이 도입 되면서 리액트에도 리액트 컴포넌트를 만드는
+        // 새로운 방법이 도입되었다.
+
+        // class HelloWorld extends React.Component {
+        //     render() {
+        //         return React.createElement(
+        //             'h1',
+        //             {className : 'greeting'},
+        //             'Hello World'
+        //         );
+        //     }
+        // }
+
+        // 현재도 class 구문을 사용해 리액트 컴포넌트를 만들 수 있지만
+        // 함수 기반의 컴포넌트를 생성하는 방법이 리액트 16 이후 추가 되었다.
+        // 현재는 함수 기반의 컴포넌트 생성 방법이 주를 이루고 있다. 
+        function HelloWorld() {
+
+            return React.createElement('h1', { className : 'greeting'}, 'Hello World');
+        }
+
+        ReactDOM.render(
+            React.createElement(HelloWorld),
+            document.getElementById('root')
+        );
+    </script>
+    
+</body>
+</html>
