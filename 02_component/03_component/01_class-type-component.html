@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+    /* 클래스형 컴포넌트
+    ES6에서 제공 되는 클래스 문법을 이용해 렌더링 될 컴포넌트를 정의하는
+    방법을 제공한다. 
+    render() 함수는 반드시 작성되어야 하며, 반환 값으로는 랜더링 될 
+    리액트 엘리먼트를 작성한다. (일반적으로 JSX를 사용한다.)
+
+    클래스형 컴포넌트로 작성하게 되면 재사용이 가능하다는 장점이 있다. 
+    중복 되는 엘리먼트들을 추상화해서 컴포넌트로 작성하고, 
+    작성 된 컴포넌트를 재사용하는 것이 리액트가 추구하는 한 가지 방향이다. 
+    
+    컴포넌트를 정의 하는 방법은 현재 두 가지 방식을 제공한다. 
+    클래스형 컴포넌트와 함수형 컴포넌트이다. 
+    함수형 컴포넌트가 더 간결하게 작성할 수 있고 리액트 팀에서도 
+    권장하는 방식이기는 하나 state 사용 및 라이프 사이클 기능 등은 
+    클래스 컴포넌트에서만 사용 가능하다. 
+    이러한 기술적 한계는 hooks를 통해 극복할 수 있으며 이 부분은 
+    뒤에서 다루게 된다.
+    */
+        class Title extends React.Component {
+            render() {
+                return (
+                    <h1>Class Component</h1>
+                );
+            }
+        }
+
+        ReactDOM.render(<Title/>, document.getElementById('root'));
+    </script>
+    
+</body>
+</html>
