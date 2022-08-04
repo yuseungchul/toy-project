@@ -26,8 +26,12 @@
             );
         }
 
+        /* 화면에 나타나는 동작에는 문제가 없지만
+        props의 type이 잘못 되었다는 것을 콘솔을 통해 알려줌으로써
+        협업하는 개발자들에게 가이드를 줄 수 있다. */
         PropsVerify.propTypes = {
-            name: PropTypes.string
+            name: PropTypes.string,
+            favoriteNumber: PropTypes.number.isRequired
         };
 
         ReactDOM.render(
