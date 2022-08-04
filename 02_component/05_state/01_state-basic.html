@@ -41,11 +41,16 @@
                 /* state에 저장 된 number 상태 값을 구조 분해 할당을 이용해 저장 */
                 const { number } = this.state;
 
+                /* state의 값을 변경하기 위해서는 setState 함수를 사용해야 한다. 
+                새로운 상태 값을 가지고 있는 Object를 동일한 키로 설정하여 인자를
+                전달하면 state 객체를 덮어쓰게 된다. 
+                기존 state에 여러가지 값이 있다고 해도 동일한 키를 가진 값만 덮어쓰기 된다. 
+                */
                 return (
                 <>
                     <h1>Count : { number }</h1>
-                    <button>- 1</button> 
-                    <button>+ 1</button> 
+                    <button onClick={ () => this.setState({ number : number - 1 }) }>- 1</button> 
+                    <button onClick={ () => this.setState({ number : number + 1 }) }>+ 1</button> 
                 </>
                 );
             }
