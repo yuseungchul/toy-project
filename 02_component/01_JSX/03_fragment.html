@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        const user = {
+            name : 'Gildong',
+            phone : '010-1234-5678'
+        };
+
+        // 최상위 엘리먼트가 두 개 이상이면 에러 발생 (하나의 돔 트리만 생성해야 함)
+        // const element = (
+        //     <h1>Hello, { user.name }</h1>
+        //     <h3>phone : { user.phone }</h3>
+        // );
+
+        // <div> 태그로 감싸서 하나의 돔 트리를 생성할 수 있도록 한다.
+        // const element = (
+        //     <div>
+        //         <h1>Hello, { user.name }</h1>
+        //         <h3>phone : { user.phone }</h3>
+        //     </div>
+        // );
+
+        const element = (
+            <React.Fragment>
+                <h1>Hello, { user.name }</h1>
+                <h3>phone : { user.phone }</h3>
+            </React.Fragment>
+        );
+
+        ReactDOM.render(element, document.getElementById('root'));
+    </script>
+</body>
+</html>
