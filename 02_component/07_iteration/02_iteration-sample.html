@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        const { useState } = React;
+
+        function App() {
+
+            const [users, setUsers] = useState([
+                { id : 1, name : '홍길동'},
+                { id : 2, name : '유관순'},
+                { id : 3, name : '이순신'}
+            ]);
+
+            const [inputText, setInputText] = useState('');
+            const [nextId, setNextId] = useState(4);
+
+            /* li 더블 클릭시 동작하는 이벤트 핸들러 */
+            const onRemove = id => {
+                const changedUsers = users.filter(user => user.id !== id);
+                setUsers(changedUsers);
+            }
+
+            /* input 태그 입력값 있을 경우 동작하는 이벤트 핸들러 */
+            const onChangeHandler = e => setInputText(e.target.value);
+
+            /* 버튼 클릭 시 입력 된 user state에 업데이트하는 이벤트 핸들러 */
+            const onClickHandler = () => {
+
+                /* 기존 users에 새롭게 입력 된 user를 추가한 새로운 배열 리턴 */
+                const changedUsers = users.concat({
+                    id : nextId,
+                    name : inputText
+                });
+
+                setUsers(changedUsers);
+                setNextId(nextId + 1);
+                setInputText('');
+            }
+
+            const userList = users.map(user => <li key={ user.id } onDoubleClick={ () => onRemove(user.id) }>{ user.name }</li>);
+
+            return (
+                <>
+                    <input value={ inputText } onChange={ onChangeHandler }/>
+                    <button onClick={ onClickHandler }>추가</button>
+                    <ul>{ userList }</ul>
+                </>
+            );
+        }
+
+        ReactDOM.render(<App/>, document.getElementById('root'));
+
+    </script>
+</body>
+</html>
