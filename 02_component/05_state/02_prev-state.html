@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        class Counter extends React.Component {
+            /* prevState를 활용한 setState 함수 사용
+            this.setState는 이벤트 핸들러에서 여러번 호출한다고 해도 누적해서 
+            state 값을 갱신하지 않는다. 이 때 해결할 수 있는 방법은 변경할 
+            state 객체 대신 함수를 인자로 전달하는 것이다. 
+            전달하는 콜백 함수의 첫 번째 인자는 이전 상태 값을 가리키는 prevState
+            이며 두번째 인자는 지금 가지고 있는 props이다. props가 필요하지 않다면 
+            생략해서 작성한다. 
+            */
+
+            // 클래스 필드 정의 제안
+            // 클래스를 정의할 떄 프로퍼티 이름 = 값을 써주면 클래스 필드를 만들 수 있다. 
+            state = {           // 이 때 this. 은 사용하지 않는다.
+                number : 0
+            };
+
+            render () {
+
+                const { number } = this.state;
+
+                return (
+                    <>
+                        <h1 style={ (number < 0) ? { color : 'red' } : { color : 'blue' }}>Count : { number } </h1>
+                        <button onClick={ () => this.setState({ number : number - 1})}>- 1</button>
+                        <button 
+                            onClick={ 
+                                () => {
+                                    /* state 업데이트는 함수가 종료 된 뒤 수행 된다. */
+                                    // console.log(`number : ${ this.state.number}`);
+                                    // this.setState({ number : number + 1 }); 
+                                    // console.log(`number : ${ this.state.number}`);
+                                    // this.setState({ number : this.state.number + 1 }); 
+                                    // console.log(`number : ${ this.state.number}`);  
+                                    
+                                    /* 이러한 문제를 해결하기 위해서 prevState를 이용한다. */
+                                    this.setState((prevState, props) => {
+                                        return {
+                                            number : prevState.number + 1
+                                        }
+                                    });
+                                    
+                                    /* 함수식에 리턴 구문만 있는 경우 객체는 소괄호로 감싼다. */
+                                    this.setState(prevState => ({number : prevState.number + 1}));
+                                }
+                            }
+                        >
+                            + 1
+                        </button>
+                    </>
+                );
+            }
+        }
+
+        ReactDOM.render(<Counter/>, document.getElementById('root'));
+    </script>
+</body>
+</html>

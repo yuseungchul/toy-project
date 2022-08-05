@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        /* setState 이후 특정 작업 실행하기
+           setState 실행 이후 특정한 작업을 실행하고 싶을 때는 두 번째 인자로 
+           콜백함수를 전달하여 처리할 수 있다. 
+        */
+
+        class Light extends React.Component {
+
+            state = {
+                isOn : false
+            };
+
+            render() {
+
+                const { isOn } = this.state;
+
+                const style = {
+                    width : 200,
+                    height : 200,
+                    backgroundColor : isOn ? 'green' : 'red',
+                    transition : '2s'
+                };
+
+                return (
+                    <>
+                        <div style={ style }></div> 
+                        <button onClick={
+                            () => this.setState(
+                                { isOn : !isOn })
+                        }>{ isOn ? 'OFF' : 'ON'}</button>
+                    </>
+                );
+            }
+        }
+
+        ReactDOM.render(<Light/>, document.getElementById('root'));
+    </script>
+</body>
+</html>
