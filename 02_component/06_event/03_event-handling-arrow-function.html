@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        /* 성능적으로는 크게 차이 없지만 가독성을 위해 
+        컴포넌트 내부 함수로 이벤트 핸들러 메소드를 분리한 뒤에
+        render 함수 안에서는 미리 선언 된 함수를 사용하는 것으로 render 함수의
+        가독성을 향상 시킬 수 있다. */
+
+        class EventComponent extends React.Component {
+
+            state = {
+                message : ''
+            }
+
+           
+            /* 반드시 화살표 함수로 정의한다.
+            일반 함수로 정의하게 될 경우 본인만의 this를 가지게 되고 
+            바인딩 되는 this가 없어 undefined 처리가 된다. 
+            하지만 화살표 함수는 본인만의 this를 가지지 않아 상위 스코프에 해당하는 
+            class의 this를 사용한다. 
+            */
+            onChangeHandler = (e) => {
+                this.setState({
+                    message : e.target.value
+                });
+            }
+            onClickHandler = (e) => {
+                this.setState({
+                    message : ''
+                });
+            }
+
+            render() {
+                return (
+                    <>
+                        <h1>이벤트 핸들링</h1>
+                        <input
+                            type="text"
+                            name="message"
+                            placeholder="텍스트를 입력해주세요"
+                            onChange={ this.onChangeHandler }
+                            value={ this.state.message }
+                        />
+                        <button
+                            // 버튼을 클릭하면 메세지 상태 값이 지워지도록 이벤트 설정
+                            onClick={ this.onClickHandler }
+                        >
+                            확인
+                        </button>
+                        <h2>확인 : { this.state.message }</h2>
+                    </>
+                );
+            }
+        }
+
+        ReactDOM.render(<EventComponent/>, document.getElementById('root'));
+    </script>
+</body>
+</html>
