@@ -13,21 +13,42 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        /* 앞에서 다룬 로그인 컴포넌트(클래스)를 함수형 컴포넌트로 수정 */
+        /* 앞에서 다룬 함수형 컴포넌트의 username과 password가 한 번에 다루어 질 수 있도록 수정 */
         const { useState } = React;
 
         function LoginComponent () {
 
-            const [username, setUsername] = useState('');
-            const [password, setPassword] = useState('');
+            const [form, setForm] = useState({
+                username : '',
+                password : ''
+            });
 
-            const onChangeUsername = e => setUsername(e.target.value);
-            const onChangePassword = e => setPassword(e.target.value);
+            const { username, password } = form;
+
+            const onChangeHandler = e => {
+                const changedForm = {
+                    ...form,    // 스프레드 연산자를 이용하여 기존 form 객체를 복사
+                    [e.target.name] : e.target.value // 이벤트가 발생한 값만 덮어쓰기
+                }
+
+                setForm(changedForm);
+            }            
+
             const onClickHandler = e => {
                 alert(`username : ${ username }\npassword : ${ password }`);
-                setUsername('');
-                setPassword('');
+                setForm({
+                    username : '',
+                    password : ''
+                });
             }
+
+            /* 엔터키 입력 시 로그인 버튼 클릭한 것과 동일한 이벤트 발생하도록 핸들러 작성 */
+            const onKeyPressHandler = e => {
+                console.log(e);
+                if(e.key === "Enter")
+                    onClickHandler();
+            }
+
             return (
                     <div>
                         <h1>로그인</h1>
@@ -36,7 +57,7 @@
                             type="text"
                             name="username"
                             placeholder="아이디를 입력하세요"
-                            onChange={ onChangeUsername }
+                            onChange={ onChangeHandler }
                             value={ username }
                         />
                         <br/>
@@ -45,7 +66,8 @@
                             type="password"
                             name="password"
                             placeholder="비밀번호를 입력하세요"
-                            onChange={ onChangePassword }
+                            onChange={ onChangeHandler }
+                            onKeyPress={ onKeyPressHandler }
                             value={ password }
                         />
                         <br/>
