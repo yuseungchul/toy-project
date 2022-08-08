@@ -27,9 +27,19 @@
 
             const [count, setCount] = useState(0);
 
+            useEffect(() => {
+                console.log('useEffect...');
+
+                /* 정리 함수를 반환하도록 한다 */
+                return () => {
+                    console.log('clean-up...');
+                }
+            });
+
             return (
                 <>
                     <h1>count : { count }</h1>
+                    <button onClick={ () => setCount(count + 1) }>+ 1</button>
                 </>
             );
         }
