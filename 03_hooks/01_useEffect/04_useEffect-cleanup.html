@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        /* 
+            useEffect를 통해 컴포넌트가 마운트 해제 되기 직전이나
+            업데이트 되기 직전에 실행할 내용이 있다면 clean-up 할 수 있다. 
+            클래스 컴포넌트의 componentWillUnmount에서 하는 역할과 동일하다. 
+        */
+
+        const { useState, useEffect } = React;
+
+        function Counter(){
+
+            const [count, setCount] = useState(0);
+
+            return (
+                <>
+                    <h1>count : { count }</h1>
+                </>
+            );
+        }
+
+        ReactDOM.render(<Counter/>, document.getElementById('root'));
+    </script>
+</body>
+</html>
