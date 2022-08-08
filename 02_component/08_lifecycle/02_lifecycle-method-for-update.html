@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        /* 
+            컴포넌트 업데이트 생명주기에 대한 기준은 크게 4가지이다
+            1. props 변경
+            2. state 변경
+            3. 부모 컴포넌트 리랜더링
+            4. this.forceUpdate로 강제 랜더링 트리거 (잘 사용하지 않음)
+        */
+
+        class TimePrinter extends React.Component {
+
+            state = {
+                now : new Date().toLocaleTimeString()
+            };
+
+            static getDerivedStateFromProps(nextProps, prevState){
+
+                console.log('getDerivedStateFromProps');
+
+                return null;
+
+            }
+
+            /* 컴포넌트가 리랜더링을 할 것인지 말 것인지 결정하는 메소드이다. */
+            shouldComponentUpdate(nextProps, nextState) {
+
+                /* 자주 사용되지는 않는 생명주기 메소드이다. 
+                주로 성능 최적화를 목적으로 하며, 
+                상황에 따라 리랜더링을 방지할 목적으로 사용된다. 
+                */
+                console.log('shouldComponentUpdate');
+                console.log(nextProps);     // 리랜더링시 변경 된 props값
+                console.log(nextState);     // 리랜더링시 변경 된 state값
+
+                /* 반드시 boolean을 반환해야 하며, false를 반환할 시 
+                업데이트 과정은 여기서 중단된다. 해당 메소드를 만들지 않으면 
+                언제나 true 값을 반환한다. */
+                // return false;
+                return true;
+            }
+
+            render() {
+
+                console.log('render');
+                
+                return (
+                    <>
+                        <button
+                            onClick={ () => this.setState({ now : new Date().toLocaleTimeString() }) }
+                        >
+                            현재 시간 확인하기
+                        </button>
+                        <h1>{ this.state.now }</h1>
+                    </>
+                );
+            }
+        }
+
+        ReactDOM.render(<TimePrinter/>, document.getElementById('root'));
+
+
+
+    </script>
+</body>
+</html>
