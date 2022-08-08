@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        const { useReducer } = React;
+
+        function reducer (state, action) {
+
+            /* 상태 관리를 하려는 input 태그의 name과 value는 action(e.target)에 
+            담겨있다. 나머지 태그들의 상태는 스프레드 연산자로 복사하고 
+            새로운 값만 덮어쓰기 해서 새로운 state 객체를 반환한다. */
+            return {
+                ...state,
+                [action.name] : action.value
+            }
+
+        }
+
+        function RegistForm () {
+
+            const [state, dispatch] = useReducer(reducer, {
+                name : '',
+                nickname : ''
+            });
+
+            const { name, nickname } = state;
+
+            /* onChange 이벤트가 발생하면 reducer로 이벤트 발생 객체를 전달한다 */
+            const onChangeHandler = e => dispatch(e.target);
+
+            return (
+                <>
+                    <label>이름 : </label>
+                    <input type="text" name="name" value={ name } onChange={ onChangeHandler }/>
+                    <br/>
+                    <label>닉네임 : </label>
+                    <input type="text" name="nickname" value={ nickname } onChange={ onChangeHandler }/>
+                    <br/>
+                    <div>
+                        <h3>입력한 이름 : { name }</h3>
+                        <h3>입력한 닉네임 : { nickname }</h3>
+                    </div>
+                </>
+            );
+
+        }
+
+        function RegistForm2 () {
+
+            const [state, dispatch] = useReducer(reducer, {
+                address : '',
+                email : ''
+            });
+
+            const { address, email } = state;
+
+            /* onChange 이벤트가 발생하면 reducer로 이벤트 발생 객체를 전달한다 */
+            const onChangeHandler = e => dispatch(e.target);
+
+            return (
+                <>
+                    <label>주소 : </label>
+                    <input type="text" name="address" value={ address } onChange={ onChangeHandler }/>
+                    <br/>
+                    <label>이메일 : </label>
+                    <input type="email" name="email" value={ email } onChange={ onChangeHandler }/>
+                    <br/>
+                    <div>
+                        <h3>입력한 주소 : { address }</h3>
+                        <h3>입력한 이메일 : { email }</h3>
+                    </div>
+                </>
+            );
+
+        }
+
+        ReactDOM.render(
+            [
+                <RegistForm/>, 
+                <RegistForm2/>
+            ],
+            document.getElementById('root')
+        );
+
+
+
+    </script>
+</body>
+</html>
