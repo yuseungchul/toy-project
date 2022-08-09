@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        const { useState, useRef, useEffect } = React;
+
+        function LoginComponent() {
+
+            const [form, setForm] = useState({
+                username : '',
+                password : ''
+            });
+
+            const usernameRef = useRef();
+            console.log(usernameRef);   // 랜더링 이전 동작시에는 undefined
+
+            const onChangeHandler = (e) => {
+                setForm({
+                    ...form,
+                    [e.target.name] : e.target.value
+                });
+            }
+
+            const onClickHandler = () => {
+                alert(`username : ${ form.username }\npassword : ${ form.password }`);
+
+                setForm({
+                    username : '',
+                    password : ''
+                });
+
+            }
+
+            return (
+                <>
+                    <input
+                        type="text"
+                        name="username"
+                        ref={ usernameRef }
+                        placeholder="username"
+                        value={ form.username }
+                        onChange={ onChangeHandler }
+                    />
+                    <br/>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="password"
+                        value={ form.password }
+                        onChange={ onChangeHandler }
+                    />
+                    <br/>
+                    <button onClick={ onClickHandler }>로그인</button>
+                </>
+            );
+
+        }
+
+        ReactDOM.render(<LoginComponent/>, document.getElementById('root'));
+
+    </script>
+</body>
+</html>
