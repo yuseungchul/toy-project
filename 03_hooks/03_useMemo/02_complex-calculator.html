@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        const { useState } = React;
+
+        const longtimeCalculator = (number) => {
+
+            console.log('오래 걸리는 연산');
+            for(let i = 0; i < 999999999; i++) {
+                // blank
+            }
+
+            return number + 10000;
+        };
+
+        const shorttimeCalculator = (number) => {
+            
+            console.log('오래 걸리지 않는 연산');
+
+            return number + 1;
+        }
+
+
+        function App() {
+
+            const [longtimeNumber, setLongtimeNumber] = useState(1);
+            /* 시간이 얼마 걸리지 않는 연산을 하나 더 추가한다. */
+            const [shorttimeNumber, setShorttimeNumber] = useState(1);
+
+            const longtimeResult = longtimeCalculator(longtimeNumber);
+            const shorttimeResult = shorttimeCalculator(shorttimeNumber);
+
+            /* 시간이 얼마 걸리지 않는 연산을 수행해서 state가 바뀔 때
+            다시 화면을 랜더링하기 위해 해당 App 함수를 다시 호출하기 때문에 
+            시간이 오래 걸리는 연산과 오래 걸리지 않는 연산이 둘 다 다시 수행된다. 
+            */
+            return (
+                <>
+                    <h3>오래 걸리는 연산</h3>
+                    <input
+                        type="number"
+                        value={ longtimeNumber }
+                        onChange={ (e) => setLongtimeNumber(parseInt(e.target.value)) }
+                    />
+                    <span> + 10000 = { longtimeResult }</span>
+
+                    <h3>오래 걸리지 않는 연산</h3>
+                    <input 
+                        type="number"
+                        value={ shorttimeNumber }
+                        onChange={ (e) => setShorttimeNumber(parseInt(e.target.value)) }
+                    />
+                    <span> + 1 = { shorttimeResult }</span>
+                </>
+            );
+        }
+
+        ReactDOM.render(<App/>, document.getElementById('root'));
+
+    </script>
+</body>
+</html>
