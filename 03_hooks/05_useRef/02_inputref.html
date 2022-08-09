@@ -27,6 +27,11 @@
             const usernameRef = useRef();
             console.log(usernameRef);   // 랜더링 이전 동작시에는 undefined
 
+            /* 초기 화면이 랜더링 되고 난 후 포커스를 이동할 목적으로 많이 사용된다. */
+            useEffect(() => {
+                usernameRef.current.focus();
+            }, []);
+
             const onChangeHandler = (e) => {
                 setForm({
                     ...form,
@@ -42,6 +47,8 @@
                     password : ''
                 });
 
+                /* 로그인 버튼 클릭 후 다시 초기화 되었을 때도 포커스를 준다. */
+                usernameRef.current.focus();
             }
 
             return (
