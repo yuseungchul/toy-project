@@ -18,19 +18,55 @@
 
         function App() {
 
-            const [number, isNumber] = useState(0);
+            const [number, setNumber] = useState(0);
             const [isKorea, setIsKorea] = useState(true);
 
-            const location = isKorea ? '한국' : '외국';
+            // 1. 처음은 원시 자료형으로 테스트
+            // const location = isKorea ? '한국' : '외국';
+
+            // 2. 객체로 테스트 
+            // const location = {
+            //     country : isKorea ? '한국' : '외국'
+            // }
+
+            /* 객체의 경우 App이 호출 될 때마다 지역 변수가 초기화 되면서 매번
+            새로운 객체를 만들기 때문에 속성 값은 변경이 없더라도 매번 새로운 객체가
+            만들어지게 된다. 이 때 useEffect의 의존성 배열에 추가 된 location은 
+            매번 다른 값으로 인지해서 number만 바뀐 상황에서도 매번 useEffect가 
+            호출이 되게 된다. 그러면 불필요한 DB 호출, api 호출 등이 발생할 수 있다. 
+            */
+
+            // 3. useMemo로 문제 해결
+            const location = useMemo(() => {
+                return {
+                    country : isKorea? '한국' : '외국'
+                }
+            }, [isKorea]);
 
             useEffect(() => {
                 // 지역의 변화에 따라서 해당 지역의 어떤 정보를 조회해오는 구문
                 console.log('useEffect 호출됨...');
             }, [location]);
 
+            return (
+                <>
+                    <h2>좋아하는 숫자를 입력해주세요</h2>
+                    <input 
+                        type="number"
+                        value={ number }
+                        onChange={ (e) => setNumber(e.target.value) }
+                    />
+                    <hr/>
+                    <h2>지금 당신이 있는 위치는?</h2>
+                    {/*<p>국가 : { location }</p>*/}
+                    <p>국가 : { location.country }</p> 
+                    <button onClick={ () => setIsKorea(!isKorea) }>국가 토글하기</button>
+                </>
+            );
 
         }
 
+        ReactDOM.render(<App/>, document.getElementById('root'));
     </script>
     
 </body>
