@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+
+        const { useState } = React;
+
+        function useInput() {
+
+            const [value, setValue] = useState('');
+            const onChange = (e) => setValue(e.target.value);
+
+            return {value, onChange};
+        }
+
+        function App() {
+                
+            const username = useInput();
+            const password = useInput();
+            const email = useInput();
+
+            return (
+                <div>
+                    <label>이름 : </label>
+                    {/*<input type="text" id="username" value={ username.value } onChange={ username.onChange }/>*/}
+                    <input type="text" id="username" {...username}/>
+                    <br/>
+                    <label>비밀번호 : </label>
+                    <input type="password" id="password" {...password}/>
+                    <br/>
+                    <label>이메일 : </label>
+                    <input type="email" id="email" {...email}/>
+                    <br/>
+                    <h3>username : { username.value }</h3> 
+                    <h3>password : { password.value }</h3> 
+                    <h3>email : { email.value }</h3>
+                </div>
+            );
+
+        }
+
+        ReactDOM.render(<App/>, document.getElementById('root'));
+
+
+    </script>
+</body>
+</html>
