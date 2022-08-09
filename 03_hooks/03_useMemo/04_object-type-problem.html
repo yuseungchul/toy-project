@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        const { useState, useEffect, useMemo } = React;
+
+        function App() {
+
+            const [number, isNumber] = useState(0);
+            const [isKorea, setIsKorea] = useState(true);
+
+            const location = isKorea ? '한국' : '외국';
+
+            useEffect(() => {
+                // 지역의 변화에 따라서 해당 지역의 어떤 정보를 조회해오는 구문
+                console.log('useEffect 호출됨...');
+            }, [location]);
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
