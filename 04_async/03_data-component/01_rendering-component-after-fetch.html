@@ -42,8 +42,12 @@
 
         function Item({ user }) {
 
+            const onClickHandler = (id) => {
+                console.log(id);
+            }
+
             return (
-                <div className="item">
+                <div className="item" onClick={ () => onClickHandler(user.id) }>
                     <h4>{ user.name }</h4>
                     <p>userId : { user.id }</p>
                     <p>email : { user.email }</p>
