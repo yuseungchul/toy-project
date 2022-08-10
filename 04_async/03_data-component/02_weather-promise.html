@@ -25,7 +25,32 @@
 
             useEffect(
                 () => {
-                    console.log(navigator.geolocation.getCurrentPosition(() => {}));
+                    /* 위치 정보에 대한 조회가 완료 된 뒤 날씨 정보 api로 요청이 되어야 하므로 
+                    두가지 비동기 요청에 대한 순서를 정해서 수행해야 한다. */
+
+                    new Promise((resolve, reject) => {
+
+                        navigator.geolocation.getCurrentPosition(currentPosition => {
+                            console.log(currentPosition);
+                            setPosition({
+                                longitude : currentPosition.coords.longitude,
+                                latitude : currentPosition.coords.latitude
+                            });
+                            resolve(currentPosition.coords);
+                        });
+
+                    })
+                    .then(coords => {
+
+                        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${API_KEY}`)
+                        .then(response => response.json())
+                        .then(json => {
+                            console.log(json);
+                        });
+
+                    })
+                    
+                    
                 }, 
                 []
             );
