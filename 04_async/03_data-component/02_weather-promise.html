@@ -22,6 +22,9 @@
         function Weather() {
 
             const [position, setPosition] = useState({});
+            const [cityname, setCityname] = useState('');
+            const [weather, setWeather] = useState({});
+            const [wind, setWind] = useState({});
 
             useEffect(
                 () => {
@@ -46,10 +49,12 @@
                         .then(response => response.json())
                         .then(json => {
                             console.log(json);
+                            setCityname(json.name);
+                            setWeather(json.weather[0]);
+                            setWind(json.wind);
                         });
 
-                    })
-                    
+                    });
                     
                 }, 
                 []
@@ -57,7 +62,11 @@
 
             return (
                 <>
-
+                    <h3>현재 위치</h3> 
+                    <h4>{ `위도 : ${ position.longitude } 경도 : ${ position.latitude }` }</h4>
+                    <h4>{ `조회 도시 : ${ cityname }` }</h4>
+                    <h4>{ `날씨 : ${ weather.main } 날씨 설명 : ${ weather.description }` }</h4>
+                    <h4>{ `풍향 : ${ wind.deg } 풍속 : ${ wind.speed }` }</h4>
                 </>
             );
         }
