@@ -11,3 +11,9 @@ export function getMenuDetail(menuCode) {
 
     return menus.find(menu => menu.menuCode === parseInt(menuCode));
 }
+
+/* 메뉴 이름을 전달 받아 메뉴 이름을 포함하고 있는 메뉴 목록 반환 */
+export function searchMenu(menuName) {
+
+    return menus.filter(menu => menu.menuName.match(menuName));
+}
