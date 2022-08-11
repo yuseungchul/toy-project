@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const { useState } = React;
+
+        function SearchBox({ setImgUrl }) {
+
+            const [emojiName, setEmojiName] = useState('');
+
+            const onClickHandler = () => {
+                fetch('https://api.github.com/emojis')
+                .then(response => response.json())
+                .then(data => setImgUrl(data[emojiName]));
+                // axios.get('https://api.github.com/emojis')
+                //     .then(res => {
+                //         setImgUrl(res.data[emojiName]);
+                //     });
+            }
+
+            return (
+                <>
+                    <input type="search" name="emojiName" value={ emojiName } onChange={ e => setEmojiName(e.target.value) }/>
+                    <button onClick={ onClickHandler } >검색</button>
+                </>
+            );
+        }
+
+        function ImageBox({ imgUrl }) {
+
+            return (
+                imgUrl? <img src={ imgUrl } width="200" height="200"/>: <p>No emoji</p>
+            );
+        }
+
+        function App() {
+
+            const [imgUrl, setImgUrl] = useState('');
+
+            return (
+                <>
+                    <SearchBox setImgUrl={ setImgUrl }/>
+                    <br/>
+                    <ImageBox imgUrl={ imgUrl }/>
+                </>
+            );
+        }
+
+        ReactDOM.render(<App/>, document.getElementById('root'));
+    </script>
+</body>
+</html>
