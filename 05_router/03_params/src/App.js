@@ -4,11 +4,12 @@ import Main from "./pages/Main";
 import Menu from "./pages/Menu";
 import About from "./pages/About";
 import MenuDetail from './pages/MenuDetail';
+import MenuSearchResult from './pages/MenuSearchResult';
 
 function App() {
   /*  파라미터 값을 읽기 위한 react-router-dom의 hooks
       1. menu route 하위에 중첩으로 pathvariable의 값을 이용하여 MenuDetails를 랜더링
-
+      2. menu route 하위에 중첩으로 쿼리스트링 형태의 값을 이용하여 MenuSearchResult를 랜더링
   */
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
             <Route path="menu">
               <Route index element={ <Menu/> }/>
               <Route path=":menuCode" element={ <MenuDetail/> }/>
+              <Route path="search" element={ <MenuSearchResult/> }/>
             </Route>
           </Route>
         </Routes>
