@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function MenuItem ({ menu }) {
 
-    /* path 형태로 메뉴코드 값을 전달한다.  */
+    /* pathvariable 형태로 메뉴코드 값을 전달한다.  */
     return (
         <Link to={`/menu/${ menu.menuCode }`}>
             <div className={ itemStyle.MenuItem }>
