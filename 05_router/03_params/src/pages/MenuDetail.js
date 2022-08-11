@@ -28,7 +28,11 @@ function MenuDetail() {
         <>  
             <h2>메뉴 상세 설명</h2>
             <h3>메뉴 이름 : { menu.menuName }</h3>
-            
+            <h3>메뉴 가격 : { menu.menuPrice }</h3>
+            <h3>메뉴 종류 : { menu.categoryName }</h3>
+            <h3>메뉴 설명 : { menu.detail.description }</h3>
+            {/* 사진은 public 폴더에 둔다. src 폴더는 import시 고정 된 사진만 import 할 수 있다. */}
+            <img src={ menu.detail.image } style={ { maxWidth : 500 } } alt={ menu.menuName } />
         </>
     );
 }
