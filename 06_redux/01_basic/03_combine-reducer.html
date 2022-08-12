@@ -18,12 +18,66 @@
 
     <script type="text/babel">
 
+        /* 관리 대상 state가 복잡하거나 reducer 함수로 관리해야 할 성격이 다른 경우 
+        combine reducer를 이용할 수 있다. */
         const { Provider, useSelector, useDispatch } = ReactRedux;
-        const { createStore } = Redux;
+        const { combineReducers, createStore } = Redux;
 
+        /* 관리해야 할 상태의 초기값 설정 */
+        const countInitState = {
+            currentCount : 0
+        }
+
+        const activationInitState = {
+            isActivity : false
+        }
+
+        /* 여러 리듀서를 하나의 rootReducer로 묶을 때 combineReducers를 이용한다. */
+        const rootReducer = combineReducers({
+            countReducer : (state = countInitState, action) => {
+
+                const { type, payload } = action;
+
+                switch(type) {
+                    case 'INCREMENT' : 
+                        return {
+                            currentCount: state.currentCount + payload.incrementValue
+                        };
+                    case 'DECREMENT' : 
+                        return {
+                            currentCount: state.currentCount - payload.decrementValue
+                        };
+                    default :
+                        return state;
+                }
+            },
+            activationReducer : (state = activationInitState, action) => {
+
+                const { type } = action;
+
+                switch(type) {
+                    case 'TOGGLE' :
+                        return {
+                            isActivity : !state.isActivity
+                        };
+                    default : 
+                        return state;
+                }
+            }
+        });
+
+
+        /* store 생성
+        store 생성 시 reducer는 한 개만 사용할 수 있기 때문에 combineReducer를 이용한 rootReducer 사용 */
+        const store = createStore(rootReducer);
 
         function App() {
 
+            /* combineReducer를 이용하는 경우 useSelector의 콜백 함수 매개변수로 rootReducer의 state가 반환 된다. */
+            const { currentCount } = useSelector(state => state.countReducer);
+            const { isActivity } = useSelector(state => state.activationReducer);
+
+            const dispatch = useDispatch();
 
             const incrementCount = () => {
                 dispatch({
@@ -43,19 +97,28 @@
                 });
            }
 
+           const toggleActivation = () => {
+                dispatch({ type: 'TOGGLE' });
+           }
+
             return (
                 <>
-                    <h1>current count : </h1>
+                    <h1>current count : { currentCount }</h1>
                     <button onClick={ incrementCount }>1 증가</button> 
                     <button onClick={ decrementCount }>1 감소</button>
 
-                    <h1>isActivity : </h1>
-                    <button>toggle activity</button>
+                    <h1>isActivity : { isActivity.toString() }</h1>
+                    <button onClick={ toggleActivation }>toggle activity</button>
                 </>
             );
         }
 
-
+        ReactDOM.render(
+            <Provider store={ store }>
+                <App/>
+            </Provider>,
+            document.getElementById('root')
+        );
     </script>
     
 </body>
