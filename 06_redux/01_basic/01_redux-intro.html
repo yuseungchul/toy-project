@@ -52,6 +52,13 @@
         /* 스토어의 상태 변화를 구독할 함수를 콜백 형태로 전달한다. 
         리액트와 연동하여 react redux를 사용할 때는 직접 subscribe를 호출하지는 않는다. */
         store.subscribe(() => console.log(store.getState()));
+
+        /* dispatch는 리듀서 함수를 호출하며, state는 현재 상태를 리듀서가 넣어서 호출한다.
+        dispatch를 이용해 action을 넣어 호출하게 되면, 리듀서 함수의 두 번째 인자로 값을 전달하게 된다. 
+        state를 변경하는 유일한 방법은 액션을 보내는 것 뿐이다. */
+        store.dispatch({ type : 'INCREMENT'});
+        store.dispatch({ type : 'INCREMENT'});
+        store.dispatch({ type : 'DECREMENT'});
     </script>
 </body>
 </html>
