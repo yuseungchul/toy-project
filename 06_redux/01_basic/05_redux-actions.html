@@ -44,6 +44,11 @@
             [DECREMENT] : (amount = 1) => ({ decrementValue : amount})
         });
 
+        console.log(createActions({
+            [INCREMENT] : (amount = 1) => ({ incrementValue : amount}),
+            [DECREMENT] : (amount = 1) => ({ decrementValue : amount})
+        }));
+
         /* 리듀서 */
         /* 리듀서 함수도 간결하게 작성이 가능해진다. 
         첫번째 인자는 state를 전달 받고, 두번째 인자는 action을 전달 받는데 
