@@ -17,47 +17,35 @@
 
         const { useState, useEffect } = React;
 
-        function Timer() {
+        function reducer (state, action){
 
-            useEffect(
-                () => {
-                    console.log('타이머가 시작합니다...');
-                    const timer = setInterval(
-                        () => {
-                            console.log(new Date().toLocaleTimeString());
-                        }, 1000 
-                    );
+            switch(action.type){
+
+                case 'INCREMENT' : 
+                    return { value : state.value +1 };
+                case 'DECREMENT' : 
+                    return { value : state.value -1};
+                default : 
+                    return state;
                     
-                    /* clean up을 위해 함수를 반환하면 해당 컴포넌트를 
-                    언마운트 시 setInterval을 종료 시킨다. 
-                    제거하지 않으면 계속해서 setInterval이 동작하므로 눈에는 
-                    보이지 않지만 메모리 누수가 일어난다. */
-                    return () => {
-                        clearInterval(timer);
-                        console.log('타이머가 종료됩니다...');
-                    }
-                },
-                []
-            );
-
-            return (
-                <h1>타이머를 시작합니다.</h1>
-            );
+            }
         }
+        
+        function Counter(){
+            
+            const[state, dispatch] = useReducer(reducer, { value : 0});
 
-        function App() {
-
-            const [isTrue, setIsTrue] = useState(false);
-
-            return (
+            return(
                 <>
-                    <button onClick={ () => setIsTrue(!isTrue) }>타이머 토글</button> 
-                    { isTrue && <Timer/> }
+                    <h1> count: { state.value}</h1>
+                    <button onClick= {() => dispatch( {type: 'DECREMENT'} )}> -1 </button>
+                    <button onClick= {() => dispatch( {type: 'DECREMENT'} )}> -1 </button>
+            
                 </>
+
             );
-
         }
-
+        
         ReactDOM.render(<App/>, document.getElementById('root'));
 
     </script>

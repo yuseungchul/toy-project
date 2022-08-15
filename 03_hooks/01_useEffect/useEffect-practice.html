@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect} = React;
+
+
+        function Timer() {
+
+            useEffect(
+                () => {
+                    console.log('타이머가 시작');
+                    const timer = setInterval(
+                        () => {
+                            console.log(new Date().toLocaleTimeString());
+                        }, 1000
+                    );
+
+                    return () => {
+                        clearInterval(timer);
+                        console.log('타이머 종료');
+                    }
+                }
+            );
+            
+
+            return (
+                <h1>타이머를 시작합니다. </h1>
+            );
+        }
+
+        function App(){
+
+            const [isTrue, SetIstrue] = useState(false);
+
+            return(
+                <>
+                    <button onClick={() => setIsTrue(!isTrue)}> 타이머 토글 </button>
+                    { isTrue && <Timer/> }
+                </>
+            );
+        }
+
+        
+        ReactDOM.render(<App/>, document.getElementById('root'));
+    </script>
+    
+</body>
+</html>
