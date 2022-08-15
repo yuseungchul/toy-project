@@ -1,0 +1,120 @@
+header {
+  height: 75px;
+  padding: 1rem;
+  background: gray;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+nav{
+  margin-left: auto;
+}
+
+
+ body {
+  padding-top: 55px;
+} 
+
+.categoryNm{
+  float: left;
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.restaurantNm{
+  float: left;
+  margin-right:10px;
+  font-size: 50px;
+}
+
+.like{
+  position: absolute;
+  font-size: 30px;
+  padding-top: 50px;
+}
+
+.likeCount{
+  position: absolute;
+  margin-left: 45px;
+  font-size: 25px;
+  padding-top: 55px;
+}
+
+.review{
+  position: absolute;
+  font-size: 30px;
+  padding-top: 50px;
+  margin-left: 120px;
+}
+
+.reviewCount{
+  position: absolute;
+  margin-left: 230px;
+  font-size: 25px;
+  padding-top: 55px;
+}
+
+.images{
+  margin-top: 100px;
+}
+
+.image1{
+  width:33%;
+  height: 300px;
+  box-sizing: border-box;
+
+}
+
+.image2{
+  width:33%;
+  height: 300px;
+  box-sizing: border-box;
+  float: left;
+}
+  
+
+.image3{
+  width:33%;
+  height: 300px;
+  box-sizing: border-box;
+  
+}
+
+.me-auto{
+  display: flex;
+  
+}
+
+.navHome{
+  font-size: 30px;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 50px;
+
+  
+}
+
+.navMenu{
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  margin-right: 50px;
+
+  
+}
+
+.navReview{
+  font-size: 30px;
+  display: flex;
+  justify-content: flex-end;
+  
+  
+}

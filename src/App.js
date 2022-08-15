@@ -1,11 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Detail from './pages/Detail';
 
 function App() {
   return (
-    <div>
-
-    </div>
+    <BrowserRouter>
+      <Routes>
+          <Route path = "/detail" element={<Detail/>}>
+          </Route>
+      </Routes>
+    </BrowserRouter>
+    
   );
 }
 
