@@ -13,7 +13,7 @@ function Detail(){
         </header>
         <body>
           <div>
-            <div className="restaurantNm">해목</div>
+            <div className="restaurantNm">해목(HaeMok)</div>
             <div className="categoryNm">일식</div>
             <br />
           </div>
@@ -24,9 +24,9 @@ function Detail(){
             <div className="reviewCount">5</div>
           </div>
           <div className='images'>
-            <img className="image1" src="images/해목1.png" alt="해목1"/>
-            <img className="image2" src="images/해목2.png" alt="해목2"/>
-            <img className="image3" src="images/해목3.png" alt="해목3"/>
+            <img className="image1" src="images/images_detail/ja_22_01.jpg" alt="haemok1"/>
+            <img className="image2" src="images/images_detail/ja_22_02.jpg" alt="haemok2"/>
+            <img className="image3" src="images/images_detail/ja_22_03.jpg" alt="haemok3"/>
           </div>
           <div>
             <Navbar bg="dark" variant="dark">
