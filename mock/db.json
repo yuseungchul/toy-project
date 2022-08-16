@@ -7,15 +7,51 @@
             "address": "서울특별시 강남구 삼성로112길 10 nrm빌라",
             "operationHour": "11:30~21:30",
             "phone": "02-543-2847",
-            "isDelivery": false,
+            "isDelivery": "N",
             "like": 478,
-            "menu": "마파두부 소 : 20,000원 \n꿔바로우 소 : 25,000원 \n양장피 : 36,000원 \n구수계 : 30,000원",
+            "menu": ["마파두부 소 : 20,000원", "꿔바로우 소 : 25,000원", "양장피 : 36,000원", "구수계 : 30,000원"],
             "detail": {
-                "comments": "간단한 메뉴이면서도 맛은 그이상~* 기름을 많이사용하는 중국요리인데도 느끼함보다는 적당한 간에 담백함이 가득했어요! 코스요리라 배부르게 맛보진못해도, 여러가지 즐길수있어서 좋았어요~\n",
+                "comments": ["간단한 메뉴이면서도 맛은 그이상~* 기름을 많이사용하는 중국요리인데도 느끼함보다는 적당한 간에 담백함이 가득했어요! 코스요리라 배부르게 맛보진못해도, 여러가지 즐길수있어서 좋았어요~","차이린메뉴중 해산물이 들어가는 메뉴는 어느걸시켜도 실패할 확률이 적은듯해요. 큼직한 해산물이들어간데다가 식감또한 각각 어울리게 잘 살려내서 맛있게 잘먹었습니다. 이런메뉴먹으러 자주 방문하러갑니다","대부분 중식당은 한국인입맛에 맞춰나온쪽이나, 차이린은 중국본토요리라 호불호가 있는편이에요" ],
                 "images_category": "/images_category/image_ch_01.jpg",
                 "images_detail_1": "/images_detail_1/ch_01_01.jpg",
                 "images_detail_2": "/images_detail_1/ch_01_02.jpg",
                 "images_detail_3": "/images_detail_1/ch_01_03.jpg"
+            }
+        },
+        {
+            "storeCd": 2,
+            "storetNm": "JS가든 압구정점",
+            "category": "ch",
+            "address": "서울특별시 강남구 언주로174길 13 미소빌딩 2F",
+            "operationHour": "11:30~22:00",
+            "phone": "02-3447-4488",
+            "isDelivery": "Y",
+            "like": 315,
+            "menu": "전복포도씨유자장면 : 14,000원 \n찹쌀탕수육 : 50,000원 \n유린기 : 55,000원 \n화권 : 6,000원",
+            "detail": {
+                "comments": "간단한 메뉴이면서도 맛은 그이상~* 기름을 많이사용하는 중국요리인데도 느끼함보다는 적당한 간에 담백함이 가득했어요! 코스요리라 배부르게 맛보진못해도, 여러가지 즐길수있어서 좋았어요~\n",
+                "images_category": "/images_category/image_ch_02.jpg",
+                "images_detail_1": "/images_detail_1/ch_02_01.jpg",
+                "images_detail_2": "/images_detail_1/ch_02_02.jpg",
+                "images_detail_3": "/images_detail_1/ch_02_03.jpg"
+            }
+        },
+        {
+            "storeCd": 3,
+            "storetNm": "몽중헌 청담점",
+            "category": "ch",
+            "address": "서울특별시 강남구 도산대로 445 M빌딩 지하 1층",
+            "operationHour": "11:30~22:00",
+            "phone": "02-3446-7887",
+            "isDelivery": "Y",
+            "like": 803,
+            "menu": "광동식 전가복 (小) : 62,000원 \n후난식 볶음밥 : 16,000원 \n삼선 짬뽕 : 16,000원 \n하교(3Pcs) : 9,800원",
+            "detail": {
+                "comments": "간단한 메뉴이면서도 맛은 그이상~* 기름을 많이사용하는 중국요리인데도 느끼함보다는 적당한 간에 담백함이 가득했어요! 코스요리라 배부르게 맛보진못해도, 여러가지 즐길수있어서 좋았어요~\n",
+                "images_category": "/images_category/image_ch_02.jpg",
+                "images_detail_1": "/images_detail_1/ch_02_01.jpg",
+                "images_detail_2": "/images_detail_1/ch_02_02.jpg",
+                "images_detail_3": "/images_detail_1/ch_02_03.jpg"
             }
         },
         {
@@ -124,6 +160,25 @@
             "isDelivery": "N",
             "like": 879,
             "menu": "고등어구이온소바 : 00,000원 \n성게알냉소바 : 20,000원\n냉/온소바 : 10,000원",
+            "detail": {
+                "comments": "",
+                "images_category": "/images_category/image_ja_21.jpg",
+                "images_detail_1": "/images_detail_1/ja_21_01.jpg",
+                "images_detail_2": "/images_detail_1/ja_21_02.jpg",
+                "images_detail_3": "/images_detail_1/ja_21_03.jpg"
+            }
+        },
+
+        {
+            "storeCd": 21,
+            "storetNm": "미미면가",
+            "category": "ja",
+            "address": "서울 강남구 강남대로160길 29",
+            "operationHour": "11:30~21:30",
+            "phone": " 0507-1413-5466",
+            "isDelivery": "N",
+            "like": 879,
+            "menu": "고등어구이온소바 : 20,000원 \n성게알냉소바 : 20,000원\n냉/온소바 : 10,000원",
             "detail": {
                 "comments": "",
                 "images_category": "/images_category/image_ja_21.jpg",
