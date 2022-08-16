@@ -10,46 +10,36 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        const { useState, useEffect} = React;
+        const { useReducer } = React;
 
+        function reducer(state, action){
 
-        function Timer() {
+            switch(action.type){
 
-            useEffect(
-                () => {
-                    console.log('타이머가 시작');
-                    const timer = setInterval(
-                        () => {
-                            console.log(new Date().toLocaleTimeString());
-                        }, 1000
-                    );
-
-                    return () => {
-                        clearInterval(timer);
-                        console.log('타이머 종료');
-                    }
-                }
-            );
-            
-
-            return (
-                <h1>타이머를 시작합니다. </h1>
-            );
+                case 'INCREMENT' : 
+                    return { value : state.value +1 };
+                case 'DECREMENT' : 
+                    return { value : state.value -1 };
+                default : 
+                    return state;    
+            }
         }
 
-        function App(){
+        function Counter(){
 
-            const [isTrue, SetIstrue] = useState(false);
+            const[state, dispatch] = useReducer(reducer, { value : 0});
 
-            return(
+            return (
                 <>
-                    <button onClick={() => setIsTrue(!isTrue)}> 타이머 토글 </button>
-                    { isTrue && <Timer/> }
+                    <h1>count : {state.value} </h1>
+                    <button onClick={ ()=> dispatch( { type: 'DECREMENT'})}> +1 </button> 
+                    <button onClick={ ()=> dispatch( { type: 'INCREMENT'})}> -1 </button>
                 </>
             );
         }
 
-        
+    
+      
         ReactDOM.render(<App/>, document.getElementById('root'));
     </script>
     

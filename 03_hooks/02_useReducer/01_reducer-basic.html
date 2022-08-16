@@ -26,6 +26,7 @@
         */
         function reducer (state, action) {
 
+          
             /* 타입에 따라 새로운 state를 갱신할 객체를 생성해서 리턴 */
             switch(action.type) {
                 case 'INCREMENT' :
@@ -42,7 +43,8 @@
 
             /* 리듀서 함수의 첫 번째 인자는 리듀서 함수, 
             두 번째 인자는 해당 리듀서의 기본 값을 넣어준다. 
-            state는 현재 상태이고, dispatcher는 액션을 발생시키는 함수이다. */
+            state는 현재 상태이고, dispatcher는 액션을 
+            발생시키는 함수이다. */
             const [state, dispatch] = useReducer(reducer, { value : 0 });
 
             return (

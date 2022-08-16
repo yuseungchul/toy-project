@@ -12,7 +12,7 @@ const DELETE_MENU = 'menu/DELETE_MENU';
 
 /* 메뉴 관련 액션 함수 */
 export const { menu : { getMenulist, getMenu, registMenu, modifyMenu, deleteMenu }} = createActions({
-    [GET_MENULIST]: (res) => ({ menulist : res }),
+    [GET_MENULIST]: (res) => ({ menulist : res }),   //받아온 결과값을 
     [GET_MENU]: (res) => ({ menu : res }),
     [REGIST_MENU]: (res) => ({ regist : res }),
     [MODIFY_MENU]: (res) => ({ modify : res }),
@@ -22,7 +22,7 @@ export const { menu : { getMenulist, getMenu, registMenu, modifyMenu, deleteMenu
 /* 리듀서 함수 */
 const menuReducer = handleActions(
     {   
-        [GET_MENULIST]: (state, { payload }) => {
+        [GET_MENULIST]: (state, { payload }) => {    //이렇게 처리하겠다 -> store로 이동
             return payload;
         },
         [GET_MENU]: (state, { payload }) => {

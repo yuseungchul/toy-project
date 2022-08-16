@@ -15,7 +15,7 @@ function MenuList() {
     useEffect(
         () => {
             /* menuList 호출 API */
-            dispatch(callGetMenuListAPI());
+            dispatch(callGetMenuListAPI());   //action(function) 액션인데 함수로 넘어감
         },
         []
     );
