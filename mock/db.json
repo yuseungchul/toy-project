@@ -134,25 +134,6 @@
         },
 
         {
-            "storeCd": 21,
-            "storetNm": "미미면가",
-            "category": "ja",
-            "address": "서울 강남구 강남대로160길 29",
-            "operationHour": "11:30~21:30",
-            "phone": " 0507-1413-5466",
-            "isDelivery": "N",
-            "like": 879,
-            "menu": "고등어구이온소바 : 20,000원 \n성게알냉소바 : 20,000원\n냉/온소바 : 10,000원",
-            "detail": {
-                "comments": "",
-                "images_category": "/images_category/image_ja_21.jpg",
-                "images_detail_1": "/images_detail_1/ja_21_01.jpg",
-                "images_detail_2": "/images_detail_1/ja_21_02.jpg",
-                "images_detail_3": "/images_detail_1/ja_21_03.jpg"
-            }
-        },
-
-        {
             "storeCd": 22,
             "storetNm": "해목",
             "category": "ja",
