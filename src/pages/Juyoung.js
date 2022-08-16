@@ -1,8 +1,8 @@
-import '../pages/Detail.css';
+import '../pages/Juyoung.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Nav, Container} from 'react-bootstrap';
 
-function Detail(){
+function Juyoung(){
 
     return (
       <>
@@ -43,4 +43,4 @@ function Detail(){
 
 }
 
-export default Detail;
+export default Juyoung;

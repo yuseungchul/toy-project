@@ -1,7 +1,7 @@
 {
-    "store": [
+    "restaurant": [
         {
-            "storeCd": 1,
+            "id": 1,
             "storetNm": "차이린",
             "category": "ch",
             "address": "서울특별시 강남구 삼성로112길 10 nrm빌라",
@@ -19,7 +19,7 @@
             }
         },
         {
-            "storeCd": 2,
+            "id": 2,
             "storetNm": "JS가든 압구정점",
             "category": "ch",
             "address": "서울특별시 강남구 언주로174길 13 미소빌딩 2F",
@@ -37,7 +37,7 @@
             }
         },
         {
-            "storeCd": 3,
+            "id": 3,
             "storetNm": "몽중헌 청담점",
             "category": "ch",
             "address": "서울특별시 강남구 도산대로 445 M빌딩 지하 1층",
@@ -55,7 +55,7 @@
             }
         },
         {
-            "storeCd": 4,
+            "id": 4,
             "storetNm": "대가방 압구정동점",
             "category": "ch",
             "address": "서울특별시 강남구 신사동 549-8",
@@ -73,7 +73,7 @@
             }
         },
         {
-            "storeCd": 5,
+            "id": 5,
             "storetNm": "더원 레스토랑",
             "category": "ch",
             "address": "서울특별시 강남구 삼성동 78번지 602호",
@@ -90,7 +90,7 @@
             }
         },
         {
-            "storeCd": 6,
+            "id": 6,
             "storetNm": "골목떡볶이",
             "category": "bun",
             "address": "서울특별시 송파구 문정로1길 33",
@@ -108,7 +108,7 @@
             }
         },
         {
-            "storeCd": 7,
+            "id": 7,
             "storetNm": "작은공간",
             "category": "bun",
             "address": "서울특별시 강남구 남부순환로359길 31",
@@ -126,7 +126,7 @@
             }
         },
         {
-            "storeCd": 8,
+            "id": 8,
             "storetNm": "루비떡볶이",
             "category": "bun",
             "address": "서울특별시 강남구 선릉로153길 21",
@@ -144,7 +144,7 @@
             }
         },
         {
-            "storeCd": 9,
+            "id": 9,
             "storetNm": "슈퍼집",
             "category": "bun",
             "address": "서울특별시 강남구 언주로130길 14 회림빌딩",
@@ -162,7 +162,7 @@
             }
         },
         {
-            "storeCd": 10,
+            "id": 10,
             "storetNm": "마녀김밥",
             "category": "bun",
             "address": "서울특별시 강남구 압구정로79길 32",
@@ -180,7 +180,7 @@
             }
         },
         {
-            "storeCd": 11,
+            "id": 11,
             "storetNm": "어거스트힐",
             "category": "wes",
             "address": "서울특별시 강남구 강남대로 106길 25",
@@ -197,7 +197,7 @@
             }
         },
         {
-            "storeCd": 12,
+            "id": 12,
             "storetNm": "나폴리회관",
             "category": "wes",
             "address": "서울특별시 강남구 테헤란로5길 24 1층 나폴리회관",
@@ -214,7 +214,7 @@
             }
         },
         {
-            "storeCd": 13,
+            "id": 13,
             "storetNm": "쉐이크쉑",
             "category": "wes",
             "address": "서울특별시 강남구 강남대로 452 1층 ",
@@ -232,7 +232,7 @@
         }, 
 
         {
-            "storeCd": 14,
+            "id": 14,
             "storetNm": "바비레드",
             "category": "wes",
             "address": "서울특별시 강남구 봉은사로6길 바비레드 ",
@@ -250,7 +250,7 @@
         },
 
         {
-            "storeCd": 15,
+            "id": 15,
             "storetNm": "울프강 스테이크하우스",
             "category": "wes",
             "address": "서울특별시 강남구 선롱로 152길 21 ",
@@ -267,7 +267,7 @@
             }
         },
         {
-            "storeCd": 16,
+            "id": 16,
             "storetNm": "정식당",
             "category": "ko",
             "address": "서울 강남구 선릉로158길 11",
@@ -287,7 +287,7 @@
         },
 
         {
-            "storeCd": 17,
+            "id": 17,
             "storetNm": "모퉁이식당",
             "category": "ko",
             "address": "서울 강남구 테헤란로14길 33 2층",
@@ -308,7 +308,7 @@
         },
 
         {
-            "storeCd": 18,
+            "id": 18,
             "storetNm": "농민백암순대 본점",
             "category": "ko",
             "address": "서울 강남구 선릉로86길 40-4",
@@ -327,7 +327,7 @@
         },
 
         {
-            "storeCd": 19,
+            "id": 19,
             "storetNm": "알부자",
             "category": "ko",
             "address": "서울 강남구 강남대로98길 14 1층",
@@ -347,7 +347,7 @@
         },
 
         {
-            "storeCd": 20,
+            "id": 20,
             "storetNm": "청담골",
             "category": "ko",
             "address": "서울 강남구 선릉로148길 48 미준빌딩 1층",
@@ -368,7 +368,7 @@
 
         
         {
-            "storeCd": 21,
+            "id": 21,
             "storetNm": "미미면가",
             "category": "ja",
             "address": "서울 강남구 강남대로160길 29",
@@ -388,7 +388,7 @@
         },
 
         {
-            "storeCd": 22,
+            "id": 22,
             "storetNm": "해목",
             "category": "ja",
             "address": "서울 강남구 선릉로145길 14",
@@ -408,7 +408,7 @@
         },
 
         {
-            "storeCd": 23,
+            "id": 23,
             "storetNm": "대막",
             "category": "ja",
             "address": "서울 강남구 압구정로46길 75 , 1층",
@@ -427,7 +427,7 @@
         },
 
         {
-            "storeCd": 24,
+            "id": 24,
             "storetNm": "핫쵸",
             "category": "ja",
             "address": "서울 강남구 도산대로15길 32-10 지하 1층",
@@ -448,7 +448,7 @@
         },
 
         {
-            "storeCd": 25,
+            "id": 25,
             "storetNm": "일상정원",
             "category": "ja",
             "address": "서울 강남구 봉은사로 524 오크우드 프리미어 호텔 코엑스 별관 지하2층",
