@@ -17,6 +17,216 @@
                 "images_detail_2": "/images_detail_1/ch_01_02.jpg",
                 "images_detail_3": "/images_detail_1/ch_01_03.jpg"
             }
+        },
+        {
+            "storeCd": 16,
+            "storetNm": "정식당",
+            "category": "ko",
+            "address": "서울 강남구 선릉로158길 11",
+            "operationHour": "12:00~22:00",
+            "phone": "02-517-4654",
+            "isDelivery": "N",
+            "like": 540,
+            "menu": "Lunch : 155,000원 \nDinner : 250,000원",
+            "detail": {
+                "comments": "",
+                "images_category": "/images_category/image_ko_16.jpg",
+                "images_detail_1": "/images_detail_1/ko_16_01.jpg",
+                "images_detail_2": "/images_detail_1/ko_16_02.jpg",
+                "images_detail_3": "/images_detail_1/ko_16_03.jpg"
+            }
+        },
+
+        {
+            "storeCd": 17,
+            "storetNm": "모퉁이식당",
+            "category": "ko",
+            "address": "서울 강남구 테헤란로14길 33 2층",
+            "operationHour": "10:00~22:00",
+            "phone": "0507-1329-7420",
+            "isDelivery": "Y",
+            "like": 637,
+            "menu": "보쌈김치찜 : 20,000원 \n고등어김치찜 : 10,000원\n닭볶음탕(3~4인) : 30,000원",
+            "detail": {
+                "comments": "",
+                "images_category": "/images_category/image_ko_17.jpg",
+                "images_detail_1": "/images_detail_1/ko_17_01.jpg",
+                "images_detail_2": "/images_detail_1/ko_17_02.jpg",
+                "images_detail_3": "/images_detail_1/ko_17_03.jpg"
+            }
+        },
+
+        {
+            "storeCd": 18,
+            "storetNm": "농민백암순대 본점",
+            "category": "ko",
+            "address": "서울 강남구 선릉로86길 40-4",
+            "operationHour": "11:10~21:00",
+            "phone": "02-555-9603",
+            "isDelivery": "N",
+            "like": 735,
+            "menu": "국밥 : 9,000원 \n토종순대 : 12,000원\n국밥특 : 11,000원",
+            "detail": {
+                "comments": "",
+                "images_category": "/images_category/image_ko_18.jpg",
+                "images_detail_1": "/images_detail_1/ko_18_01.jpg",
+                "images_detail_2": "/images_detail_1/ko_18_02.jpg",
+                "images_detail_3": "/images_detail_1/ko_18_03.jpg"
+            }
+        },
+
+        {
+            "storeCd": 19,
+            "storetNm": "알부자",
+            "category": "ko",
+            "address": "서울 강남구 강남대로98길 14 1층",
+            "operationHour": "11:30~22:50",
+            "phone": "0507-1362-4629",
+            "isDelivery": "Y",
+            "like": 358,
+            "menu": "알전골 : 34,000원 \n알찜 : 34,000원\n해물알찜 : 44,000원",
+            "detail": {
+                "comments": "",
+                "images_category": "/images_category/image_ko_19.jpg",
+                "images_detail_1": "/images_detail_1/ko_19_01.jpg",
+                "images_detail_2": "/images_detail_1/ko_19_02.jpg",
+                "images_detail_3": "/images_detail_1/ko_19_03.jpg"
+            }
+        },
+
+        {
+            "storeCd": 20,
+            "storetNm": "청담골",
+            "category": "ko",
+            "address": "서울 강남구 선릉로148길 48 미준빌딩 1층",
+            "operationHour": " 10:30~21:50",
+            "phone": "02-543-1252",
+            "isDelivery": "N",
+            "like": 324,
+            "menu": "가정식백반 : 10,000원 \n누룽지정식 : 11,000원\n제육볶음추가 : 4,000원",
+            "detail": {
+                "comments": "",
+                "images_category": "/images_category/image_ko_20.jpg",
+                "images_detail_1": "/images_detail_1/ko_20_01.jpg",
+                "images_detail_2": "/images_detail_1/ko_20_02.jpg",
+                "images_detail_3": "/images_detail_1/ko_20_03.jpg"
+            }
+        },
+
+        
+        {
+            "storeCd": 21,
+            "storetNm": "미미면가",
+            "category": "ja",
+            "address": "서울 강남구 강남대로160길 29",
+            "operationHour": "11:30~21:30",
+            "phone": " 0507-1413-5466",
+            "isDelivery": "N",
+            "like": 879,
+            "menu": "고등어구이온소바 : 00,000원 \n성게알냉소바 : 20,000원\n냉/온소바 : 10,000원",
+            "detail": {
+                "comments": "",
+                "images_category": "/images_category/image_ja_21.jpg",
+                "images_detail_1": "/images_detail_1/ja_21_01.jpg",
+                "images_detail_2": "/images_detail_1/ja_21_02.jpg",
+                "images_detail_3": "/images_detail_1/ja_21_03.jpg"
+            }
+        },
+
+        {
+            "storeCd": 21,
+            "storetNm": "미미면가",
+            "category": "ja",
+            "address": "서울 강남구 강남대로160길 29",
+            "operationHour": "11:30~21:30",
+            "phone": " 0507-1413-5466",
+            "isDelivery": "N",
+            "like": 879,
+            "menu": "고등어구이온소바 : 20,000원 \n성게알냉소바 : 20,000원\n냉/온소바 : 10,000원",
+            "detail": {
+                "comments": "",
+                "images_category": "/images_category/image_ja_21.jpg",
+                "images_detail_1": "/images_detail_1/ja_21_01.jpg",
+                "images_detail_2": "/images_detail_1/ja_21_02.jpg",
+                "images_detail_3": "/images_detail_1/ja_21_03.jpg"
+            }
+        },
+
+        {
+            "storeCd": 22,
+            "storetNm": "해목",
+            "category": "ja",
+            "address": "서울 강남구 선릉로145길 14",
+            "operationHour": "11:00~22:00",
+            "phone": "02-6203-0021",
+            "isDelivery": "N",
+            "like": 921,
+            "menu": "히츠마부시 : 39,000원 \n카이센동 : 36,000원\n어린이장어덮밥 : 11,000원",
+            "detail": {
+                "comments": "",
+                "images_category": "/images_category/image_ja_22.jpg",
+                "images_detail_1": "/images_detail_1/ja_22_01.jpg",
+                "images_detail_2": "/images_detail_1/ja_22_02.jpg",
+                "images_detail_3": "/images_detail_1/ja_22_03.jpg"
+            }
+        },
+
+        {
+            "storeCd": 23,
+            "storetNm": "대막",
+            "category": "ja",
+            "address": "서울 강남구 압구정로46길 75 , 1층",
+            "operationHour": " 12:00~21:00",
+            "phone": "02-516-5056",
+            "isDelivery": "N",
+            "like": 582,
+            "menu": "바질소바 : 12,000원 \n후토마키SET : 32,000원\n아부라소바 : 11,000원",
+            "detail": {
+                "comments": "",
+                "images_category": "/images_category/image_ja_23.jpg",
+                "images_detail_1": "/images_detail_1/ja_23_01.jpg",
+                "images_detail_2": "/images_detail_1/ja_23_02.jpg",
+                "images_detail_3": "/images_detail_1/ja_23_03.jpg"
+            }
+        },
+
+        {
+            "storeCd": 24,
+            "storetNm": "핫쵸",
+            "category": "ja",
+            "address": "서울 강남구 도산대로15길 32-10 지하 1층",
+            "operationHour": "11:30~22:00",
+            "phone": "0507-1444-3881",
+            "isDelivery": "N",
+            "like": 698,
+            "menu": "핫쵸오코노미야끼 : 15,000원 \n칸조(간장)야끼소바 : 14,000원\n모단야끼 : 14,000원",
+            "detail": {
+                "comments": "",
+                "images_category": "/images_category/image_ja_24.jpg",
+                "images_detail_1": "/images_detail_1/ja_24_01.jpg",
+                "images_detail_2": "/images_detail_1/ja_24_02.jpg",
+                "images_detail_3": "/images_detail_1/ja_24_03.jpg"
+            }
+        },
+
+        {
+            "storeCd": 25,
+            "storetNm": "일상정원",
+            "category": "ja",
+            "address": "서울 강남구 봉은사로 524 오크우드 프리미어 호텔 코엑스 별관 지하2층",
+            "operationHour": "11:00~22:00",
+            "phone": "02-3466-8070",
+            "isDelivery": "N",
+            "like": 351,
+            "menu": "구름스키야키(관서식) : 20,000원 \n미소스키야키(관동식) : 16,000원\n한우육회텐동 : 16,000원",
+            "detail": {
+                "comments": "",
+                "images_category": "/images_category/image_ja_25.jpg",
+                "images_detail_1": "/images_detail_1/ja_25_01.jpg",
+                "images_detail_2": "/images_detail_1/ja_25_02.jpg",
+                "images_detail_3": "/images_detail_1/ja_25_03.jpg"
+            }
         }
+
     ]
 }
