@@ -1,0 +1,20 @@
+[
+    {
+        "restaurantCd" : 1,
+        "retaurantNm" : "차이린",
+        "category" : "ch",
+        "address" : "서울특별시 강남구 삼성로112길 10 nrm빌라",
+        "operationHour" : "11:30~21:30",
+        "phone" : "02-543-2847",
+        "isDelivery" : false,
+        "like" : 478,
+        "menu" : "마파두부 소 : 20,000원 \n꿔바로우 소 : 25,000원 \n양장피 : 36,000원 \n구수계 : 30,000원",
+        "detail" : {
+            "comments" : "간단한 메뉴이면서도 맛은 그이상~* 기름을 많이사용하는 중국요리인데도 느끼함보다는 적당한 간에 담백함이 가득했어요! 코스요리라 배부르게 맛보진못해도, 여러가지 즐길수있어서 좋았어요~\n",
+            "images_category" : "/images_category/image_ch_01.jpg",
+            "images_detail_1" : "/images_detail_1/ch_01_01.jpg",
+            "images_detail_2" : "/images_detail_1/ch_01_02.jpg", 
+            "images_detail_3" : "/images_detail_1/ch_01_03.jpg"  
+        }
+    }
+]
