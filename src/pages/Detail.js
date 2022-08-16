@@ -25,8 +25,6 @@ function Detail(){
           </div>
           <div className='images'>
             <img className="image1" src="images/images_detail/ja_22_01.jpg" alt="haemok1"/>
-            <img className="image2" src="images/images_detail/ja_22_02.jpg" alt="haemok2"/>
-            <img className="image3" src="images/images_detail/ja_22_03.jpg" alt="haemok3"/>
           </div>
           <div>
             <Navbar bg="dark" variant="dark">
