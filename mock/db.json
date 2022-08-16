@@ -151,6 +151,88 @@
             }
         },
         {
+            "storeCd": 11,
+            "storetNm": "어거스트힐",
+            "category": "wes",
+            "address": "서울특별시 강남구 강남대로 106길 25",
+            "operationHour": "11:30~22:00",
+            "phone": "0507-1478-8013",
+            "isDelivery": "N",
+            "like": 1020,
+            "menu":  ["티본스테이크 : 83,900원", "올 데이 세트: 76,800원"],
+            "detail": {
+                "comments": "층고 높고 쾌적해서 좋아요! 파스타 맛은 괜찮은 정도였는데 분위기 마음에 들어서 재방문 의사 있습니다 :)\n",
+                "images_category": "/images_category/image_wes_11.jpg"
+               
+            }
+        },
+        {
+            "storeCd": 12,
+            "storetNm": "나폴리회관",
+            "category": "wes",
+            "address": "서울특별시 강남구 테헤란로5길 24 1층 나폴리회관",
+            "operationHour": "11:30~22:00",
+            "phone": "0507-1316-5067",
+            "isDelivery": "N",
+            "like": 913,
+            "menu":  ["마르게리따 : 21,000원", "콰트로 스타지오네: 26,000원", "프리마베라: 26,000원"],
+            "detail": {
+                "comments": "진짜 다들 말 안 하고 음식만 먹은 것 같아요 너무 맛있구 가게 분위기도 좋아여!!\n",
+                "images_category": "/images_category/image_wes_12.jpg"
+               
+            }
+        },
+        {
+            "storeCd": 13,
+            "storetNm": "쉐이크쉑",
+            "category": "wes",
+            "address": "서울특별시 강남구 강남대로 452 1층 ",
+            "operationHour": "11:30~22:00",
+            "phone": "02-533-5576",
+            "isDelivery": "N",
+            "like": 1342,
+            "menu":  ["쉑버거 : 7,300원", "스모크쉑: 9,300원", "치킨쉑: 7,900원"],
+            "detail": {
+                "comments": "맛있어요! 비건버거는 버섯이 패티같던데 질겨서 뜯어먹습니다~ 쉑쉑좋아요! \n",
+                "images_category": "/images_category/image_wes_13.jpg"
+               
+            }
+        }, 
+
+        {
+            "storeCd": 14,
+            "storetNm": "바비레드",
+            "category": "wes",
+            "address": "서울특별시 강남구 봉은사로6길 바비레드 ",
+            "operationHour": "11:30~22:00",
+            "phone": "02-3452-1515",
+            "isDelivery": "N",
+            "like": 1242,
+            "menu":  ["바비 스테이크 : 7,300원", "레드크림 파스타: 9,300원", "스테이크 샐러드: 7,900원"],
+            "detail": {
+                "comments": "가게가 넓고 분위기가 좋아요 웨이팅은 좀 있지만 가게가 커서 금방금방 들어가더라구요! 가성비 좋고 맛도 괜찮은 강남역 부근 괜찮은 레스토랑입니다:) \n",
+                "images_category": "/images_category/image_wes_14.jpg"
+               
+            }
+        },
+
+        {
+            "storeCd": 15,
+            "storetNm": "울프강 스테이크하우스",
+            "category": "wes",
+            "address": "서울특별시 강남구 선롱로 152길 21 ",
+            "operationHour": "11:00~22:00",
+            "phone": "0507-1486-8700",
+            "isDelivery": "N",
+            "like": 1042,
+            "menu":  ["포터하우스 스테이크: 278,000원"],
+            "detail": {
+                "comments": "분위기 진짜 좋아용 직원분들도 친절하시구! 양도 지이이인짜 많아요! 스테이크 먹다가 배불러 죽을뻔했네요 ㅠㅠ 식전 빵도 두 번이나 리필해먹었어요.. 애피타이저는 입맛을 돋게 하며..스테이크는 두말없이 맛있었습니다!! 여기만에 시그니처인 김치를 추천받아 먹었는데용 담엔 토마토 어니언으로 먹어보겠어용 \n",
+                "images_category": "/images_category/image_wes_15.jpg"
+               
+            }
+        },
+        {
             "storeCd": 16,
             "storetNm": "정식당",
             "category": "ko",
