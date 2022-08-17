@@ -24,7 +24,7 @@ function RestaurantRegistForm() {
             price:'',
             detail : {
                 comments: '',
-                image: ''
+                images_category: ''
             }
         }
     );
@@ -42,7 +42,7 @@ function RestaurantRegistForm() {
             case 'comments' : 
                 name = 'detail';
                 value = {
-                    comments : value,
+                    comments : [value],
                     image : registRestaurant.detail.image
                 };
                 break;
@@ -50,7 +50,7 @@ function RestaurantRegistForm() {
 
         setRegistRestaurant(
             {
-                ...registRestaurant ,
+                ...registRestaurant,
                 [name] : value
             }
         );
@@ -70,7 +70,7 @@ function RestaurantRegistForm() {
                 ...registRestaurant,
                 detail : {
                     comments : registRestaurant.detail.comments,
-                    image : base64
+                    images_category : base64
                 }
             }
         );
@@ -114,15 +114,6 @@ function RestaurantRegistForm() {
             <label>가맹점 이름 : </label>
             <input type="text" name="storetNm" value={ registRestaurant.storetNm } onChange={ onChangeHandler }/>
             <br/>
-            <label>메뉴 이름 : </label>
-            <input type="text" name="menu" value={ registRestaurant.menu } onChange={ onChangeHandler }/>
-            <br/>
-            <label>메뉴 가격 :  </label>
-            <input type="text" name="price" value={ registRestaurant.price } onChange={ onChangeHandler }/>
-            <br/>
-            <label>영업 시간 :  </label>
-            <input type="text" name="operationHour" value={ registRestaurant.operationHour } onChange={ onChangeHandler }/>
-            <br/>
             <label>카테고리 : </label>
             <select name="category" value={ registRestaurant.category } onChange={ onChangeHandler }>
                 <option>한식</option>
@@ -131,6 +122,18 @@ function RestaurantRegistForm() {
                 <option>중식</option>
                 <option>분식</option>
             </select>
+            <br/>
+            <label>영업 시간 :  </label>
+            <input type="text" name="operationHour" value={ registRestaurant.operationHour } onChange={ onChangeHandler } placeholder="00:00 ~ 00:00"/>
+            <br/>
+            <label>전화번호 : </label>
+            <input type="text" name="phone" value={ registRestaurant.phone } onChange={ onChangeHandler } placeholder="010-1234-5678"/>
+            <br/>
+            <label>메뉴 이름 : </label>
+            <input type="text" name="menu" value={ registRestaurant.menu } onChange={ onChangeHandler }/>
+            <br/>
+            <label>메뉴 가격 :  </label>
+            <input type="text" name="price" value={ registRestaurant.price } onChange={ onChangeHandler }/>
             <br/>
             <label>배달 여부 : </label>
             <select name="isDelivery" value={ registRestaurant.isDelivery } onChange={ onChangeHandler }>

@@ -1,6 +1,7 @@
 import RestaurantList from "../components/lists/RestaurantList";
 import { Link } from 'react-router-dom';
 
+
 function Restaurants() {
 
 
@@ -10,6 +11,8 @@ function Restaurants() {
             <Link to="./regist" >
                 <button>메뉴 등록</button>
             </Link>
+            <button>이름순 정렬</button>
+            <button>좋아요 순 정렬</button>
             <RestaurantList/>
         </div>
     );
