@@ -1,5 +1,5 @@
 import { request } from "./Api"; 
-import { getRestaurantlist, getRestaurant, registRestaurant} from "../modules/RestaurantModule";
+import { getRestaurantlist, getRestaurant, registRestaurant, registReview} from "../modules/RestaurantModule";
 import { getDefaultNormalizer } from "@testing-library/react";
 
 export function callGetRestaurantListAPI() {
@@ -37,24 +37,24 @@ export function callRegistRestaurantAPI(restaurant) {
 
     return async (dispatch, getState) => {
     
-        const result = await request('POST', '/restaurant/regist', restaurant);
+        const result = await request('POST', '/restaurant/', restaurant);
         console.log('registRestaurant result : ', result);
     
         dispatch(registRestaurant(result));
     }
 }
 
-// export function callRegistReviewAPI(restaurant) {
+export function callRegistReviewAPI(restaurant) {
     
-//     console.log('registReview api calls...');
+    console.log('registReview api calls...');
 
     return async (dispatch, getState) => {
 
-        const getData = await request('GET', `/restaurant/${restaurant.id}`);
-        getData.detail.comments.push(restaurant.detail.comments);
-        console.log(getData);
+        const updateComment = await request('GET', `/restaurant/${restaurant.id}`);
+        updateComment.detail.comments.push(restaurant.detail.comments);
+        console.log(updateComment);
 
-        const result = await request('PUT', `/restaurant/${restaurant.id}`, getData);
+        const result = await request('PUT', `/restaurant/${restaurant.id}`, updateComment);
         console.log('registReview result : ', result);
     
         dispatch(registReview(result));
@@ -73,12 +73,8 @@ export function callLikeModifyAPI(restaurant) {
 
         const result = await request('PUT', `/restaurant/${restaurant.id}`, updateLike);
         console.log('registReview result : ', result);
->>>>>>> 51cb7c2804df82b1e720af527165ba8e05b6b018
     
-//         const result = await request('POST', '/restaurant/', restaurant);
-//         console.log('registReview result : ', result);
-    
-//         dispatch(registReview(result));
-//     }
-// }
+        dispatch(registReview(result));
+    }
+}
 
