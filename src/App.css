@@ -33,3 +33,39 @@ a {
 .menuItem:hover {
     background-color:  rgba(240, 66, 66, 0.5);;
 }
+
+header {
+    height: 25px;
+    padding: 1rem;
+    background: #E23D3D;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+  }
+
+  nav{
+    margin-left: auto;
+  }
+
+  footer {
+    height: 25px;
+    padding: 1rem;
+    background: #E23D3D;
+    color: white;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 10px;
+    bottom: 0%;
+    width: 100%;
+    position: fixed;
+  }
+
+ 
+  
