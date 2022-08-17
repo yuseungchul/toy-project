@@ -16,7 +16,6 @@ function RestaurantDetail() {
             <h1>가맹점 상세</h1>
             <Restaurant id={ id }/>
             <ReviewRegistForm/>
-            <LikeModifyForm/>
         </div>
     );
 }

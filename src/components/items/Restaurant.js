@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch} from 'react-redux';
 import { callGetRestaurantAPI } from '../../apis/RestaurantAPICalls';
 
@@ -7,7 +7,7 @@ function Restaurant({ id }) {
     const result = useSelector(state => state.restaurantReducer);
     const restaurant = result.restaurant;
     const dispatch = useDispatch();
-    const [modifyLike, setModifyLike] = useState({like:''});
+
 
     useEffect(
         () => {
@@ -22,7 +22,7 @@ function Restaurant({ id }) {
             <>
                 <h3>가게 이름 : { restaurant.storetNm }</h3>
                 <h3>카테고리 : { restaurant.category }</h3>
-                <button onClick={()=>{ }}>❤</button> { restaurant.like }
+                <button>❤</button> { restaurant.like }
                 <h3>리뷰갯수 : { (restaurant.detail.comments).length }</h3>
                 <h3>영업시간 : { restaurant.operationHour }</h3>
                 <h3>전화번호 : { restaurant.phone}</h3>
