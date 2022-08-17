@@ -20,7 +20,6 @@ function RestaurantList() {
         []
     );
     
-
     return (
         restaurantList && (
             <div className="menuBox">

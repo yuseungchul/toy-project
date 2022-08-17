@@ -64,23 +64,22 @@ export function callRegistReviewAPI(restaurant) {
 }
 
 
-export function callLikeModifyAPI(data) {
+export function callLikeModifyAPI(restaurant,upLike) {
     
     console.log('modifyLike api calls…');
 
     return async (dispatch, getState) => {
 
-        console.log("data::",data)
-
-        const like = data.like + 1
-        const updateData = {...data ,like}
-
+        const like = upLike ? restaurant.like - 1 : restaurant.like + 1
+        const updateData = {...restaurant ,like}
+        
         console.log("updateData::",updateData)
 
 
-        const result = await request('PUT', `/restaurant/${data.id}`, updateData);
+        const result = await request('PUT', `/restaurant/${restaurant.id}`, updateData);
         console.log('registReview result : ', result);
     
         dispatch(modifyLike(result));
     }
 }
+

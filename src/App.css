@@ -24,9 +24,9 @@ a {
 
 .menuItem {
     width: 300px;
-    background-color: #E23D3D;
+    border: 3px solid #E23D3D;
     cursor: pointer;
-    color: white;
+    color: black;
     padding : 5px;
 }
 
@@ -47,7 +47,6 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
   }
 
   nav{

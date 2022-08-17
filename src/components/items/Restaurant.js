@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch} from 'react-redux';
 import { callGetRestaurantAPI,callLikeModifyAPI } from '../../apis/RestaurantAPICalls';
-import { increase, decrease, setLike } from '../../modules/LikeModule';
+import { increase } from '../../modules/LikeModule';
+import { FcLike, FcLikePlaceholder } from "react-icons/fc";
+
 
 function Restaurant({ id }) {
 
@@ -9,6 +11,8 @@ function Restaurant({ id }) {
     const restaurant = result.restaurant;
     const dispatch = useDispatch();
     const like = useSelector(state => state.likeReducer);
+    const [upLike,setUpLike] = useState(false);
+
     
 
 
@@ -21,7 +25,8 @@ function Restaurant({ id }) {
     );
 
     function onClickHandler(){
-        dispatch(callLikeModifyAPI(restaurant));
+        setUpLike(!upLike);
+        dispatch(callLikeModifyAPI(restaurant,upLike));
         dispatch(increase());
         
     }
@@ -31,7 +36,7 @@ function Restaurant({ id }) {
             <>
                 <h3>가게 이름 : { restaurant.storetNm }</h3>
                 <h3>카테고리 : { restaurant.category }</h3>
-                <button onClick={onClickHandler}>❤</button> { like }
+                <button onClick={onClickHandler}>{upLike ? <FcLike/>: <FcLikePlaceholder/>}</button> { like }
                 <h3>리뷰갯수 : { (restaurant.detail.comments).length }</h3>
                 <h3>영업시간 : { restaurant.operationHour }</h3>
                 <h3>전화번호 : { restaurant.phone}</h3>
