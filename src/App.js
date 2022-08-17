@@ -10,11 +10,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path = "/">
-        <Route path="regist" element={ <RestaurantRegist/> }/>
-        </Route>
         <Route path="/restaurant">
           <Route index element={<Restaurants/>}/>
+          <Route path="regist" element={ <RestaurantRegist/> }/>
           <Route path=":id" element={ <RestaurantDetail/> }/>
         </Route> 
 
