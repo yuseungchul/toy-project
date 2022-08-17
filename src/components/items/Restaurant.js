@@ -9,6 +9,7 @@ function Restaurant({ id }) {
     const restaurant = result.restaurant;
     const dispatch = useDispatch();
     const like = useSelector(state => state.likeReducer);
+    
 
 
     useEffect(
@@ -20,8 +21,9 @@ function Restaurant({ id }) {
     );
 
     function onClickHandler(){
-        dispatch(callLikeModifyAPI(id,restaurant))
+        dispatch(callLikeModifyAPI(restaurant));
         dispatch(increase());
+        
     }
 
     return (

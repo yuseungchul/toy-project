@@ -1,7 +1,7 @@
 import { request } from "./Api"; 
 import { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike} from "../modules/RestaurantModule";
 import {setLike} from "../modules/LikeModule";
-import { getDefaultNormalizer } from "@testing-library/react";
+
 
 export function callGetRestaurantListAPI() {
     
@@ -64,7 +64,7 @@ export function callRegistReviewAPI(restaurant) {
 }
 
 
-export function callLikeModifyAPI(restaurant,data) {
+export function callLikeModifyAPI(data) {
     
     console.log('modifyLike api calls…');
 
@@ -72,8 +72,8 @@ export function callLikeModifyAPI(restaurant,data) {
 
         console.log("data::",data)
 
-        const like = data.like +1
-        const updateData = { ...data ,like}
+        const like = data.like + 1
+        const updateData = {...data ,like}
 
         console.log("updateData::",updateData)
 
@@ -84,4 +84,3 @@ export function callLikeModifyAPI(restaurant,data) {
         dispatch(modifyLike(result));
     }
 }
-
