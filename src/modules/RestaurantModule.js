@@ -8,14 +8,16 @@ const GET_RESTAURANTLIST = 'restaurant/GET_RESTAURANTLIST';
 const GET_RESTAURANT = 'restaurant/GET_RESTAURANT';
 const REGIST_RESTAURANT = 'restaurant/REGIST_RESTAURANT';
 const REGIST_REVIEW = 'restaurant/REGIST_REVIEW ';
+const MODIFY_LIKE = 'restaurant/MODIFY_LIKE ';
 
 
 /* 스토어 관련 액션 함수 */
-export const { restaurant : { getRestaurantlist, getRestaurant, registRestaurant, registReview }} = createActions({
+export const { restaurant : { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike }} = createActions({
     [GET_RESTAURANTLIST]: (res) => ({ restaurantlist : res }),
     [GET_RESTAURANT]: (res) => ({ restaurant : res }),
     [REGIST_RESTAURANT]: (res) => ({ regist : res }),
-    [REGIST_REVIEW]: (res) => ({ registreview : res })
+    [REGIST_REVIEW]: (res) => ({ registreview : res }),
+    [MODIFY_LIKE]: (res) => ({ modifylike : res })
     
 });
 
@@ -32,6 +34,9 @@ const restaurantReducer = handleActions(
             return payload;
         },
         [REGIST_REVIEW]: (state, { payload }) => {
+            return payload;
+        },
+        [MODIFY_LIKE]: (state, { payload }) => {
             return payload;
         }
     },
