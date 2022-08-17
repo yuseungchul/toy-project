@@ -10,6 +10,7 @@ function App() {
         <Route path="/restaurant">
           <Route index element={<Restaurants/>}/>
           <Route path=":id" element={ <RestaurantDetail/> }/>
+          <Route path="regist" element={<RegistRestaurant/> }/>
         </Route> 
 
 
