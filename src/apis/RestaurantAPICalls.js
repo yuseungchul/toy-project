@@ -1,5 +1,6 @@
 import { request } from "./Api"; 
-import { getRestaurantlist, getRestaurant, registRestaurant} from "../modules/RestaurantModule";
+import { getRestaurantlist, getRestaurant, registRestaurant, registReview} from "../modules/RestaurantModule";
+import { getDefaultNormalizer } from "@testing-library/react";
 
 export function callGetRestaurantListAPI() {
     
@@ -43,16 +44,20 @@ export function callRegistRestaurantAPI(restaurant) {
     }
 }
 
-// export function callRegistReviewAPI(restaurant) {
+export function callRegistReviewAPI(restaurant) {
     
-//     console.log('registReview api calls...');
+    console.log('registReview api calls...');
 
-//     return async (dispatch, getState) => {
+    return async (dispatch, getState) => {
+
+        const getData = await request('GET', `/restaurant/${restaurant.id}`);
+        getData.detail.comments.push(restaurant.detail.comments);
+        console.log(getData);
+
+        const result = await request('PUT', `/restaurant/${restaurant.id}`, getData);
+        console.log('registReview result : ', result);
     
-//         const result = await request('POST', '/restaurant/', restaurant);
-//         console.log('registReview result : ', result);
-    
-//         dispatch(registReview(result));
-//     }
-// }
+        dispatch(registReview(result));
+    }
+}
 

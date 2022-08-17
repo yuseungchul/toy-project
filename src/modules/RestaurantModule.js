@@ -7,13 +7,15 @@ const initialState = {};
 const GET_RESTAURANTLIST = 'restaurant/GET_RESTAURANTLIST';
 const GET_RESTAURANT = 'restaurant/GET_RESTAURANT';
 const REGIST_RESTAURANT = 'restaurant/REGIST_RESTAURANT';
+const REGIST_REVIEW = 'restaurant/REGIST_REVIEW ';
 
 
 /* 스토어 관련 액션 함수 */
-export const { restaurant : { getRestaurantlist, getRestaurant, registRestaurant }} = createActions({
+export const { restaurant : { getRestaurantlist, getRestaurant, registRestaurant, registReview }} = createActions({
     [GET_RESTAURANTLIST]: (res) => ({ restaurantlist : res }),
     [GET_RESTAURANT]: (res) => ({ restaurant : res }),
-    [REGIST_RESTAURANT]: (res) => ({ regist : res })
+    [REGIST_RESTAURANT]: (res) => ({ regist : res }),
+    [REGIST_REVIEW]: (res) => ({ registreview : res })
     
 });
 
@@ -27,6 +29,9 @@ const restaurantReducer = handleActions(
             return payload;
         },
         [REGIST_RESTAURANT]: (state, { payload }) => {
+            return payload;
+        },
+        [REGIST_REVIEW]: (state, { payload }) => {
             return payload;
         }
     },
