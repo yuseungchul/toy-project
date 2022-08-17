@@ -23,7 +23,8 @@ function Restaurant({ id }) {
                 <h3>메뉴 가격 : { restaurant.price }</h3>
                 <h3>메뉴 종류 : { restaurant.category }</h3>
                 <h3>메뉴 상세 : { restaurant.menu}</h3>
-                {/* <img src={ restaurant.detail.image } style={ { maxWidth: 500 } } alt={ restaurant.menuName }/> */}
+                <h3>리뷰 : { (restaurant.detail.comments).map((value,index) => (<li key={index}>{value}</li>))}</h3>
+                <img src={ restaurant.detail.images_category} style={ { width: 500, height: 500 } } alt={ restaurant.storetNm }/>
             </>
         )
     );
