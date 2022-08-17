@@ -43,4 +43,16 @@ export function callRegistRestaurantAPI(restaurant) {
     }
 }
 
+// export function callRegistReviewAPI(restaurant) {
+    
+//     console.log('registReview api calls...');
+
+//     return async (dispatch, getState) => {
+    
+//         const result = await request('POST', '/restaurant/', restaurant);
+//         console.log('registReview result : ', result);
+    
+//         dispatch(registReview(result));
+//     }
+// }
 

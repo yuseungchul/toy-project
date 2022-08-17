@@ -5,9 +5,9 @@ function RestaurantCard({ restaurant }) {
     return (
         <Link to={ `/restaurant/${ restaurant.id }` }>
             <div className="menuItem">
-                <h3>이름 : { restaurant.storetNm }</h3>
-                <h3>가격 : { restaurant.price }</h3>
-                <h4>종류 : { restaurant.category }</h4>
+                <h3>상호명 : { restaurant.storetNm }</h3>
+                <h3>좋아요 : { restaurant.like }</h3>
+                <img src={ restaurant.detail.images_category} style={ { width: 500, height: 500 } } alt={ restaurant.storetNm }/>
             </div>
         </Link>
     );
