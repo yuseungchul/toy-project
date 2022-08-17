@@ -50,11 +50,28 @@ export function callRegistReviewAPI(restaurant) {
 
     return async (dispatch, getState) => {
 
-        const getData = await request('GET', `/restaurant/${restaurant.id}`);
-        getData.detail.comments.push(restaurant.detail.comments);
-        console.log(getData);
+        const updateComment = await request('GET', `/restaurant/${restaurant.id}`);
+        updateComment.detail.comments.push(restaurant.detail.comments);
+        console.log(updateComment);
 
-        const result = await request('PUT', `/restaurant/${restaurant.id}`, getData);
+        const result = await request('PUT', `/restaurant/${restaurant.id}`, updateComment);
+        console.log('registReview result : ', result);
+    
+        dispatch(registReview(result));
+    }
+}
+
+export function callLikeModifyAPI(restaurant) {
+    
+    console.log('registReview api calls...');
+
+    return async (dispatch, getState) => {
+
+        const updateLike = await request('GET', `/restaurant/${restaurant.id}`);
+        updateLike.like(restaurant.like + 1);
+        console.log(updateLike);
+
+        const result = await request('PUT', `/restaurant/${restaurant.id}`, updateLike);
         console.log('registReview result : ', result);
     
         dispatch(registReview(result));
