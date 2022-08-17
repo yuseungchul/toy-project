@@ -61,7 +61,7 @@ function ReviewResistForm(){
 
     return(
         <>
-            <textarea type="text" placeholder="댓글을 입력해주세요" name = "comments" value={ registReview.detail.comments } onChange={ onChangeHandler }/>
+            <input type="text" placeholder="댓글을 입력해주세요" name = "comments" value={ registReview.detail.comments } onChange={ onChangeHandler }/>
             <button onClick={ onClickHandler }>등록</button>
         </>
 

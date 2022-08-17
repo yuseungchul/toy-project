@@ -1,5 +1,6 @@
 import { request } from "./Api"; 
-import { getRestaurantlist, getRestaurant, registRestaurant, registReview} from "../modules/RestaurantModule";
+import { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike} from "../modules/RestaurantModule";
+import {setLike} from "../modules/LikeModule";
 import { getDefaultNormalizer } from "@testing-library/react";
 
 export function callGetRestaurantListAPI() {
@@ -28,6 +29,7 @@ export function callGetRestaurantAPI(id) {
         console.log('getRestaurant result : ', result);
     
         dispatch(getRestaurant(result));
+        dispatch(setLike(result.like));
     }
 }
 
@@ -61,20 +63,25 @@ export function callRegistReviewAPI(restaurant) {
     }
 }
 
-export function callLikeModifyAPI(restaurant) {
+
+export function callLikeModifyAPI(restaurant,data) {
     
-    console.log('registReview api calls...');
+    console.log('modifyLike api calls…');
 
     return async (dispatch, getState) => {
 
-        const updateLike = await request('GET', `/restaurant/${restaurant.id}`);
-        updateLike.like(restaurant.like + 1);
-        console.log(updateLike);
+        console.log("data::",data)
 
-        const result = await request('PUT', `/restaurant/${restaurant.id}`, updateLike);
+        const like = data.like +1
+        const updateData = { ...data ,like}
+
+        console.log("updateData::",updateData)
+
+
+        const result = await request('PUT', `/restaurant/${data.id}`, updateData);
         console.log('registReview result : ', result);
     
-        dispatch(registReview(result));
+        dispatch(modifyLike(result));
     }
 }
 
