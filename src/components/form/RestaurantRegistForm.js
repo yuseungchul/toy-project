@@ -37,9 +37,7 @@ function RestaurantRegistForm() {
 
         /* json-server에 저장될 데이터 타입 맞추기 위한 코드 */
         switch(name) {
-            case 'price' : 
-                value = parseInt(value); 
-                break;
+            
             case 'isDelivery' : 
                 value = !!value; 
                 break;
@@ -102,7 +100,7 @@ function RestaurantRegistForm() {
             /* 메뉴 등록 완료 확인 후 /menu로 이동 */
             if(result.regist) {
                 alert('메뉴 등록');
-                navigate(`restaurant/`);
+                navigate(`/restaurant`);
             }
         },
         [result]
@@ -122,7 +120,7 @@ function RestaurantRegistForm() {
             <input type="text" name="menu" value={ registRestaurant.menu } onChange={ onChangeHandler }/>
             <br/>
             <label>메뉴 가격 :  </label>
-            <input type="number" name="price" value={ registRestaurant.price } onChange={ onChangeHandler }/>
+            <input type="text" name="price" value={ registRestaurant.price } onChange={ onChangeHandler }/>
             <br/>
             <label>카테고리 : </label>
             <select name="categoryName" value={ registRestaurant.category } onChange={ onChangeHandler }>
