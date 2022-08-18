@@ -99,9 +99,9 @@ export function callLikeSortAPI () {
     return async (dispatch, getState) => {
         const result = await request('GET', `/restaurant`).then(
             res=>res.sort((a,b) => {
-            if(a.like < b.like) return -1;
+            if(a.like > b.like) return -1;
             if(a.like == b.like) return 0;
-            if(a.like > b.like) return 1;
+            if(a.like < b.like) return  1;
             }));
         dispatch(sortLike(result));
     }

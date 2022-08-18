@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import RestaurantCard from '../items/RestaurantCard';
 import { callGetRestaurantListAPI, callSortAPI, callLikeSortAPI, callSelectCategoryAPI } from "../../apis/RestaurantAPICalls";
+import "../../pages/main.css";
 
 
 function RestaurantList() {
@@ -36,8 +37,10 @@ function RestaurantList() {
     return (
         restaurantList && (
             <>
-            <button onClick={ascList}>이름순 정렬</button>
-            <button onClick={likeList}>좋아요 순 정렬</button>
+            <div class='mainbuttonbox'>
+                <button onClick={ascList} class='sortbuttonbox'>이름순 정렬</button>
+                <button onClick={likeList} class='sortbuttonbox'>좋아요 순 정렬</button>
+            </div>
             <button onClick={ () => { categoryList('한식') }}>한식</button>
             <button onClick={ () => { categoryList('중식') }}>중식</button>
             <button onClick={ () => { categoryList('양식') }}>양식</button>
