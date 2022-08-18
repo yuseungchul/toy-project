@@ -11,8 +11,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route index element={ <Main/> }/>
         <Route path = "/" element={ <Layout/> }>
-          <Route index element={ <Main/> }/>
+         
             <Route path="restaurant">
             <Route index element={<Restaurants/>}/>
             <Route path="regist" element={ <RestaurantRegist/> }/>

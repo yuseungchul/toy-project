@@ -1,138 +1,134 @@
+body { 
+  margin: 0;
+}
 .container{
-    position: relative;
-    width: 100%;
-    height: 280px;
-    left: 1px;
-    right: 1px;
-    top: 0px;
+  position: relative;
+  width: 100%;
+  height: 280px;
+  left: 1px;
+  right: 1px;
+  top: 0px;
 }
 .headerimage{
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 280px;
-    background-color: rgba(0,0,0,1);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 280px;
+  background-color: rgba(0,0,0,1);
 }
 .center_title1{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color:white;
-    font-size: 2.5em;
-    margin-top: 1px;
-    line-height: 28px;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    align-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color:white;
+  font-size: 2.5em;
+  margin-top: 1px;
+  line-height: 28px;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  align-content: center;
 }
 
 .containerbox{
-    
-    position: relative;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    margin-left: 45px; 
-    font-size: 2em;
-    justify-content: flex-start;
-    color: #FD1313;
+  
+  position: relative;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 45px; 
+  font-size: 2em;
+  justify-content: flex-start;
+  color: #FD1313;
 }
 
 .borderline{
-    position: relative;
-    /* width: 1750px;
-    height: 0px;
-    left: 72px;
-    top: 400px; */
-    border: 1px solid #FD1313;
-    transform: rotate(0.09deg);
-    margin-left: 30px;
-    margin-right: 30px;
+  position: relative;
+  /* width: 1750px;
+  height: 0px;
+  left: 72px;
+  top: 400px; */
+  border: 1px solid #FD1313;
+  transform: rotate(0.09deg);
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 
 .fullbox{
-    display: flex;
-    position: relative;
-    max-width: 1000px;
-    align-items: center;
+  /* display: flex; */
+  position: relative;
+  align-items: center;
+  margin-left: 40px;
 }
-
 .subbox{
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-   
+  display: flex;
+  position: relative;
+  flex-wrap: wrap; 
+  width: 1000px;
+  padding-left: 450px;
+  justify-content: center;
+ 
 }
 
 /* .menubox{
-    display: inline-block;
-    position: relative;
-    width: 300px;
-    height: 300px;
-    left: 152px;
-    top: 250px;
-    border:1px solid black;
-    margin: 5px;
-   
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  left: 152px;
+  top: 250px;
+  border:1px solid black;
+  margin: 5px;
+ 
 } */
 .contentimage{
-    position: inline-block;
-    width: 300px;
-    height: 300px;
-    left: 152px;
-    top: 435px;
-    border:1px;
-    padding-top: 10px;
-    margin: 10px;
-    border: 10px sold black;
+  position: inline-block;
+  width: 300px;
+  height: 300px;
+  left: 152px;
+  top: 435px;
+  border:1px;
+  padding-top: 10px;
+  margin: 10px;
+  border: 1px sold black;
 }
 
 
 
 .clickbox{
-    color: #FD1313;
+  color: #FD1313;
 }
 
 
 
-  .menubox img {
-    width : 250px;
-    height: 250px;
-  }
+.footbox {
+  /* height: 25px;
+  padding: 2rem;
+  background: #E23D3D;
+  color:white;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 1em;
+  bottom: 0%;
+  width: 100%; */
+  
+      height: 25px;
+      padding: 2rem;
+      background: #E23D3D;
+      color: white;
+      justify-content: space-between;
+      text-align: center;
+      font-size: 10px;
+      bottom: 0%;
+      width:100%;
+      position:relative;
 
-
-  /* RestaurantList button */
-
-  .mainbuttonbox{
-    text-align: right;
-  }
-
-  .sortbuttonbox{
-    width: 120px;
-    height: 60px;
-    border-radius: 15%;
-    border : 2px solid #E23D3D;
-    margin : 2px;
-    background-color: #E23D3D;
-    color: aliceblue;
-    font-size : 14px;
-    font-weight: bolder;
     
-  }
-
-  .sortbuttonbox:hover{
-    background:#7A0C43;
-  }
-
-  .sortbuttonbox:active{
-    font-size:12px;
-  }
+  
+}

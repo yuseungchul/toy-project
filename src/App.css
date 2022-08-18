@@ -35,19 +35,27 @@ a {
 }
 
 header {
-    height: 25px;
+    height: 50px;
     padding: 1rem;
     background: #E23D3D;
     color: white;
     font-weight: bold;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
-    position: fixed;
+    position: relative;
+    
     top: 0;
     left: 0;
     right: 0;
   }
+
+  
+.headersub{
+    padding-left: 1750px;
+    align-items:flex-end;
+    float:left;
+}
 
   nav{
     margin-left: auto;
@@ -55,7 +63,7 @@ header {
 
   footer {
     height: 25px;
-    padding: 1rem;
+    padding: 2rem;
     background: #E23D3D;
     color: white;
     justify-content: space-between;
@@ -63,7 +71,8 @@ header {
     font-size: 10px;
     bottom: 0%;
     width: 100%;
-    position: fixed;
+    position: absolute;
+    font-size: 1em;
   }
 
  
