@@ -13,7 +13,6 @@ function App() {
       <Routes>
       <Route index element={ <Main/> }/>
         <Route path = "/" element={ <Layout/> }>
-         
             <Route path="restaurant">
             <Route index element={<Restaurants/>}/>
             <Route path="regist" element={ <RestaurantRegist/> }/>
@@ -25,5 +24,6 @@ function App() {
     
   );
 }
+
 
 export default App;

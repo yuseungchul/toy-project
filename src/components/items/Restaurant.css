@@ -1,0 +1,12 @@
+.detailPage{
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+.detailLike {
+    background-color: white;
+    border: 1px solid white;
+    font-size: 30px;
+}

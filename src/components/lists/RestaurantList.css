@@ -1,0 +1,24 @@
+.mainbuttonbox{
+    text-align: right;
+  }
+
+  .sortbuttonbox{
+    width: 120px;
+    height: 60px;
+    border-radius: 15%;
+    border : 2px solid #E23D3D;
+    margin : 2px;
+    background-color: #E23D3D;
+    color: aliceblue;
+    font-size : 14px;
+    font-weight: bolder;
+    
+  }
+
+  .sortbuttonbox:hover{
+    background:#7A0C43;
+  }
+
+  .sortbuttonbox:active{
+    font-size:12px;
+  }

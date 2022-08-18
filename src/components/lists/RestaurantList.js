@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import RestaurantCard from '../items/RestaurantCard';
 import { callGetRestaurantListAPI, callSortAPI, callLikeSortAPI, callSelectCategoryAPI } from "../../apis/RestaurantAPICalls";
-import "../../pages/main.css";
+import "./RestaurantList.css";
 
 
 function RestaurantList() {

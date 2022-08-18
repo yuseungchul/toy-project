@@ -1,6 +1,6 @@
 import "./main.css";
 import { Link } from 'react-router-dom';
-import Footer from "../components/commons/Footer";
+
 
 function Main() {
     return(
@@ -44,12 +44,7 @@ function Main() {
                     <h1 className="clickbox">맛집보러가기 Click!</h1>
                 </Link>
                 </div>
-
-               
             </div>
-            <div className="footbox">
-                <b >강남 뭐먹지?! Tel. 02-1234-5678  서울시 강남구 테헤란로24  gangnam@mysite.com</b>
-                </div>
         </div>
 
         
