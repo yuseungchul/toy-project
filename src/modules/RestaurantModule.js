@@ -14,7 +14,7 @@ const CALL_SORT = 'restaurant/CALL_SORT';
 
 
 /* 스토어 관련 액션 함수 */
-export const { restaurant : { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike, callsort }} = createActions({
+export const { restaurant : { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike, callSort }} = createActions({
     [GET_RESTAURANTLIST]: (res) => ({ restaurantlist : res }),
     [GET_RESTAURANT]: (res) => ({ restaurant : res }),
     [REGIST_RESTAURANT]: (res) => ({ regist : res }),
@@ -44,9 +44,10 @@ const restaurantReducer = handleActions(
         },
         [CALL_SORT]: (state, { payload }) => {
             return payload;
-        },
-        initialState
-    }    
+        }
+
+    },
+    initialState   
 );
 
 export default restaurantReducer;

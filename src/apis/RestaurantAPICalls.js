@@ -11,7 +11,7 @@ export function callGetRestaurantListAPI() {
     return async (dispatch, getState) => {
         
         /* Api의 axios 처리 참조  */
-        const result = await request('GET', '/restaurant')
+        const result = await request('GET', '/restaurant');
         console.log('getRestaurantList result : ', result);
         
         /* action 생성 함수에 결과 전달하며 dispatch 호출 */
