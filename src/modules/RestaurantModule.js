@@ -1,5 +1,6 @@
 import { createActions, handleActions } from "redux-actions";
 
+
 /* 초기 state값 */
 const initialState = {};
 
@@ -9,15 +10,17 @@ const GET_RESTAURANT = 'restaurant/GET_RESTAURANT';
 const REGIST_RESTAURANT = 'restaurant/REGIST_RESTAURANT';
 const REGIST_REVIEW = 'restaurant/REGIST_REVIEW ';
 const MODIFY_LIKE = 'restaurant/MODIFY_LIKE ';
+const CALL_SORT = 'restaurant/CALL_SORT';
 
 
 /* 스토어 관련 액션 함수 */
-export const { restaurant : { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike }} = createActions({
+export const { restaurant : { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike, callsort }} = createActions({
     [GET_RESTAURANTLIST]: (res) => ({ restaurantlist : res }),
     [GET_RESTAURANT]: (res) => ({ restaurant : res }),
     [REGIST_RESTAURANT]: (res) => ({ regist : res }),
     [REGIST_REVIEW]: (res) => ({ registreview : res }),
-    [MODIFY_LIKE]: (res) => ({ modifylike : res })
+    [MODIFY_LIKE]: (res) => ({ modifylike : res }),
+    [CALL_SORT]: (res) => ({ callsort : res })
     
 });
 
@@ -38,10 +41,12 @@ const restaurantReducer = handleActions(
         },
         [MODIFY_LIKE]: (state, { payload }) => {
             return payload;
-        }
-    },
-    initialState
+        },
+        [CALL_SORT]: (state, { payload }) => {
+            return payload;
+        },
+        initialState
+    }    
 );
 
 export default restaurantReducer;
-

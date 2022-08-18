@@ -1,5 +1,5 @@
 import { request } from "./Api"; 
-import { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike} from "../modules/RestaurantModule";
+import { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike, callSort} from "../modules/RestaurantModule";
 import {setLike} from "../modules/LikeModule";
 
 
@@ -11,7 +11,7 @@ export function callGetRestaurantListAPI() {
     return async (dispatch, getState) => {
         
         /* Api의 axios 처리 참조  */
-        const result = await request('GET', '/restaurant');
+        const result = await request('GET', '/restaurant')
         console.log('getRestaurantList result : ', result);
         
         /* action 생성 함수에 결과 전달하며 dispatch 호출 */
@@ -80,6 +80,18 @@ export function callLikeModifyAPI(restaurant,upLike) {
         console.log('registReview result : ', result);
     
         dispatch(modifyLike(result));
+    }
+}
+
+export function callSortAPI () {
+    return async (dispatch, getState) => {
+        const result = await request('GET', `/restaurant`).then(
+            res=>res.sort((a,b) => {
+            if(a.animalName < b.animalName) return -1;
+            if(a.animalName == b.animalName) return 0;
+            if(a.animalName > b.animalName) return 1;
+            }));
+        dispatch(callSort(result));
     }
 }
 
