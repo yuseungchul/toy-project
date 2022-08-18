@@ -37,7 +37,7 @@ function RestaurantList() {
     return (
         restaurantList && (
             <>
-            <div class='mainbuttonbox'>
+            <div className='mainbuttonbox'>
                 <button onClick={ascList} className='sortbuttonbox'>이름순 정렬</button>
                 <button onClick={likeList} className='sortbuttonbox'>좋아요 순 정렬</button>
             </div>

@@ -104,19 +104,6 @@
 
 
 
-.foot {
-    height: 25px;
-    padding: 2rem;
-    background: #E23D3D;
-    color:white;
-    justify-content: space-between;
-    text-align: center;
-    font-size: 1em;
-    bottom: 0%;
-    width: 100%;
-    
-  }
-
   .menubox img {
     width : 250px;
     height: 250px;

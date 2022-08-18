@@ -4,7 +4,6 @@ import RestaurantDetail from './pages/RestaurantDetail';
 import RestaurantRegist from './pages/RestaurantRegist';
 import Layout from './layouts/Layout';
 import Main from './pages/Main';
-
 import "./App.css";
 
 

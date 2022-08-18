@@ -1,6 +1,6 @@
 import "./main.css";
 import { Link } from 'react-router-dom';
-import Footer from "../components/commons/Footer";
+
 
 function Main() {
     return(
