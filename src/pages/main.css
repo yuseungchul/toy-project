@@ -60,9 +60,10 @@
 .fullbox{
     display: flex;
     position: relative;
+    max-width: 1000px;
     align-items: center;
-    margin-left: 40px;
 }
+
 .subbox{
     display: flex;
     position: relative;
@@ -92,7 +93,7 @@
     border:1px;
     padding-top: 10px;
     margin: 10px;
-    border: 1px sold black;
+    border: 10px sold black;
 }
 
 
@@ -114,4 +115,9 @@
     bottom: 0%;
     width: 100%;
     
+  }
+
+  .menubox img {
+    width : 250px;
+    height: 250px;
   }

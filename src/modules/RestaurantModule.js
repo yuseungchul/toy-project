@@ -20,7 +20,7 @@ export const { restaurant : { getRestaurantlist, getRestaurant, registRestaurant
     [REGIST_RESTAURANT]: (res) => ({ regist : res }),
     [REGIST_REVIEW]: (res) => ({ registreview : res }),
     [MODIFY_LIKE]: (res) => ({ modifylike : res }),
-    [CALL_SORT]: (res) => ({ callsort : res })
+    [CALL_SORT]: (res) => ({ restaurantlist : res })
     
 });
 

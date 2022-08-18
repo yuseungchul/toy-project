@@ -87,9 +87,9 @@ export function callSortAPI () {
     return async (dispatch, getState) => {
         const result = await request('GET', `/restaurant`).then(
             res=>res.sort((a,b) => {
-            if(a.animalName < b.animalName) return -1;
-            if(a.animalName == b.animalName) return 0;
-            if(a.animalName > b.animalName) return 1;
+            if(a.storetNm < b.storetNm) return -1;
+            if(a.storetNm == b.storetNm) return 0;
+            if(a.storetNm > b.storetNm) return 1;
             }));
         dispatch(callSort(result));
     }
