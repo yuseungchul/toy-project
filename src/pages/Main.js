@@ -10,6 +10,7 @@ function Main() {
                     <img className="headerimage" alt="header_01" src="/images/images_main/main_header.jpg" />
                     <h1 className="center_title1"> 솔직한 리뷰, 믿을 수 있는 평점!</h1>
                 </div>
+
                 <div id="headbox">
                     <div className="containerbox">
                         <p>강남뭐먹지?!</p>
@@ -20,6 +21,7 @@ function Main() {
                         </Link>
                     </div>
                 </div>
+                
                 <div className="borderline"></div>
 
                 <div className="fullbox">

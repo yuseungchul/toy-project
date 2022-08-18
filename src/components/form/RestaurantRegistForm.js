@@ -137,7 +137,7 @@ function RestaurantRegistForm() {
                     onChange={ fileChangeHandler }/>
                 <br/>
             </div>
-            <button name="btn1" onClick={ onClickHandler }>가맹점 등록</button>
+            <button id="btn1" onClick={ onClickHandler }>가맹점 등록</button>
             
         </div>
         </>

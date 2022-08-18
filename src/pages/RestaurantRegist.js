@@ -26,7 +26,7 @@ function RegistRestaurant() {
                 <div className="introduce">
                        <h2 >Introduce you <br/>
                             to Restaurant <br/>
-                               in GangNam</h2>
+                            in GangNam</h2>
                     
                 </div>  
                 
