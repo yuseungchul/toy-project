@@ -38,8 +38,8 @@ function RestaurantList() {
         restaurantList && (
             <>
             <div class='mainbuttonbox'>
-                <button onClick={ascList} class='sortbuttonbox'>이름순 정렬</button>
-                <button onClick={likeList} class='sortbuttonbox'>좋아요 순 정렬</button>
+                <button onClick={ascList} className='sortbuttonbox'>이름순 정렬</button>
+                <button onClick={likeList} className='sortbuttonbox'>좋아요 순 정렬</button>
             </div>
             <button onClick={ () => { categoryList('한식') }}>한식</button>
             <button onClick={ () => { categoryList('중식') }}>중식</button>
