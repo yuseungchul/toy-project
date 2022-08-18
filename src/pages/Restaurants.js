@@ -1,5 +1,6 @@
 import RestaurantList from "../components/lists/RestaurantList";
 import { Link } from 'react-router-dom';
+import "../components/lists/RestaurantList.css";
 
 
 
@@ -12,7 +13,7 @@ function Restaurants() {
         <div>
             <h1>메뉴 목록 </h1>
             <Link to="./regist" >
-                <button>메뉴 등록</button>
+                <button className="inputRestaurantButton">가맹점 등록</button>
             </Link>
             <RestaurantList/>
         </div>

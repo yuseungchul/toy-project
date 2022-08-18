@@ -37,18 +37,20 @@ function RestaurantList() {
     return (
         restaurantList && (
             <>
-            <div className='mainbuttonbox'>
-                <button onClick={ascList} className='sortbuttonbox'>이름순 정렬</button>
-                <button onClick={likeList} className='sortbuttonbox'>좋아요 순 정렬</button>
-            </div>
-            <button onClick={ () => { categoryList('한식') }}>한식</button>
-            <button onClick={ () => { categoryList('중식') }}>중식</button>
-            <button onClick={ () => { categoryList('양식') }}>양식</button>
-            <button onClick={ () => { categoryList('일식') }}>일식</button>
-            <button onClick={ () => { categoryList('분식') }}>분식</button>
-            <div className="menuBox">
-                { restaurantList.map(restaurant => <RestaurantCard key={ restaurant.id } restaurant={ restaurant }/>) }
-            </div>
+                <div className='mainbuttonbox'>
+                    <button onClick={ascList} className='sortbuttonbox'>이름순 정렬</button>
+                    <button onClick={likeList} className='sortbuttonbox'>좋아요 순 정렬</button>
+                </div>
+                <button className = 'categoryNm'onClick={ () => { categoryList('한식') }}>한식 &nbsp;&nbsp;&nbsp;</button>
+                <button className = 'categoryNm' onClick={ () => { categoryList('중식') }}>중식 &nbsp;&nbsp;&nbsp;</button>
+                <button className = 'categoryNm' onClick={ () => { categoryList('양식') }}>양식 &nbsp;&nbsp;&nbsp;</button>
+                <button className = 'categoryNm' onClick={ () => { categoryList('일식') }}>일식 &nbsp;&nbsp;&nbsp;</button>
+                <button className = 'categoryNm' onClick={ () => { categoryList('분식') }}>분식</button>
+                <hr className='lineStyle'/>
+                <div className="menuBox">
+                    { restaurantList.map(restaurant => <RestaurantCard key={ restaurant.id } restaurant={ restaurant }/>) }
+                    <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+                </div>
             </>
         )
     );
