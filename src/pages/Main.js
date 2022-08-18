@@ -1,5 +1,5 @@
 import "./main.css";
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Footer from "../components/commons/Footer";
 
 function Main() {
@@ -40,7 +40,9 @@ function Main() {
                 <img className="contentimage" alt="bun" src="/images/images_main/register_img.jpg"/>
                 </div>
                 <div className="click"> 
+                <Link to="./restaurant" >
                     <h1 className="clickbox">맛집보러가기 Click!</h1>
+                </Link>
                 </div>
             </div>
         </div>
