@@ -2,7 +2,10 @@ import RestaurantList from "../components/lists/RestaurantList";
 import { Link } from 'react-router-dom';
 
 
+
 function Restaurants() {
+
+
 
 
     return (

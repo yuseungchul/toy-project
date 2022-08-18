@@ -10,19 +10,23 @@ const GET_RESTAURANT = 'restaurant/GET_RESTAURANT';
 const REGIST_RESTAURANT = 'restaurant/REGIST_RESTAURANT';
 const REGIST_REVIEW = 'restaurant/REGIST_REVIEW ';
 const MODIFY_LIKE = 'restaurant/MODIFY_LIKE ';
-const CALL_SORT = 'restaurant/CALL_SORT';
-const CALL_LIKESORT = 'restaurant/CALL_LIKESORT';
+const SORT_ASC = 'restaurant/SORT_ASC';
+const SORT_LIKE = 'restaurant/SORT_Like';
+const SELECT_CATEGORY = 'restaurant/SELECT_CATEGORY';
+
 
 
 /* 스토어 관련 액션 함수 */
-export const { restaurant : { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike, callSort, callsortlike }} = createActions({
+export const { restaurant : { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike, sortAsc, sortLike, selectCategory }} = createActions({
     [GET_RESTAURANTLIST]: (res) => ({ restaurantlist : res }),
     [GET_RESTAURANT]: (res) => ({ restaurant : res }),
     [REGIST_RESTAURANT]: (res) => ({ regist : res }),
     [REGIST_REVIEW]: (res) => ({ registreview : res }),
     [MODIFY_LIKE]: (res) => ({ modifylike : res }),
-    [CALL_SORT]: (res) => ({ restaurantlist : res }),
-    [CALL_LIKESORT]: (res) => ({ restaurantlist : res })
+    [SORT_ASC]: (res) => ({ restaurantlist : res }),
+    [SORT_LIKE]: (res) => ({ restaurantlist : res }),
+    [SELECT_CATEGORY]: (res) => ({ restaurantlist : res })
+ 
     
 });
 
@@ -44,12 +48,16 @@ const restaurantReducer = handleActions(
         [MODIFY_LIKE]: (state, { payload }) => {
             return payload;
         },
-        [CALL_SORT]: (state, { payload }) => {
+        [SORT_ASC]: (state, { payload }) => {
             return payload;
         },
-        [CALL_LIKESORT]: (state, { payload }) => {
+        [SORT_LIKE]: (state, { payload }) => {
+            return payload;
+        },
+        [SELECT_CATEGORY]: (state, { payload }) => {
             return payload;
         }
+       
     },
     initialState   
 );

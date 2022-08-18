@@ -1,5 +1,5 @@
 import { request } from "./Api"; 
-import { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike, callSort} from "../modules/RestaurantModule";
+import { getRestaurantlist, getRestaurant, registRestaurant, registReview, modifyLike, sortAsc, sortLike , selectCategory} from "../modules/RestaurantModule";
 import {setLike} from "../modules/LikeModule";
 
 
@@ -91,7 +91,7 @@ export function callSortAPI () {
             if(a.storetNm == b.storetNm) return 0;
             if(a.storetNm > b.storetNm) return 1;
             }));
-        dispatch(callSort(result));
+        dispatch(sortAsc(result));
     }
 }
 
@@ -103,6 +103,19 @@ export function callLikeSortAPI () {
             if(a.like == b.like) return 0;
             if(a.like > b.like) return 1;
             }));
-        dispatch(callSort(result));
+        dispatch(sortLike(result));
     }
 }
+
+export function callSelectCategoryAPI(categoryNm) {
+
+    console.log('SelectCategory api calls…');
+
+    return async (dispatch, getState) => {
+        const result = await request('GET', `/restaurant`).then(
+            res=>res.filter(store => store.category === categoryNm));
+
+        dispatch(selectCategory(result));
+    }
+}
+
