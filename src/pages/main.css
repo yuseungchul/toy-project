@@ -120,9 +120,9 @@
     width: 120px;
     height: 60px;
     border-radius: 15%;
-    border : 2px solid orange;
+    border : 2px solid #E23D3D;
     margin : 2px;
-    background-color: #E31956;
+    background-color: #E23D3D;
     color: aliceblue;
     font-size : 14px;
     font-weight: bolder;
