@@ -4,7 +4,7 @@ body {
 .container{
   position: relative;
   width: 100%;
-  height: 280px;
+  height: 140px;
   left: 1px;
   right: 1px;
   top: 0px;
@@ -18,7 +18,7 @@ body {
   left: 0;
   z-index: 0;
   width: 100%;
-  height: 280px;
+  height: 200px;
   background-color: rgba(0,0,0,1);
 }
 .center_title1{
@@ -28,24 +28,12 @@ body {
   color:white;
   font-size: 2.5em;
   margin-top: 1px;
-  line-height: 28px;
+  line-height: 58px;
   z-index: 1;
   transform: translate(-50%, -50%);
   align-content: center;
 }
 
-.containerbox{
-  
-  position: relative;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  margin-left: 45px; 
-  font-size: 2em;
-  justify-content: flex-start;
-  color: #FD1313;
-}
 
 .borderline{
   position: relative;
@@ -57,21 +45,20 @@ body {
   transform: rotate(0.09deg);
   margin-left: 30px;
   margin-right: 30px;
+  margin-top: 50px;
 }
 
 
 .fullbox{
-  /* display: flex; */
   position: relative;
-  align-items: center;
-  margin-left: 40px;
+  float :center;
+  
+  
 }
 .subbox{
   display: flex;
   position: relative;
-  flex-wrap: wrap; 
-  width: 1000px;
-  padding-left: 450px;
+  flex-wrap: wrap;
   justify-content: center;
  
 }
@@ -89,13 +76,11 @@ body {
 } */
 .contentimage{
   position: inline-block;
-  width: 300px;
+  width: 480px;
   height: 300px;
-  left: 152px;
-  top: 435px;
   border:1px;
   padding-top: 10px;
-  margin: 10px;
+  padding-left: 5px;
   border: 1px sold black;
 }
 
@@ -128,7 +113,34 @@ body {
       bottom: 0%;
       width:100%;
       position:relative;
+}
 
-    
-  
+.click {    /* 맛집보러가기 */
+    width: 300px;
+    height: 70px;
+    float: right;
+    margin-right: 70px;
+ 
+}
+
+.containerbox{  /* 강남뭐뭑지? */
+    width: 400px;
+    margin-left: 170px;
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    font-size: 2.5em;
+    color: #FD1313;
+    height: 0;
+  }
+
+#headbox {  /* 강남뭐뭑지 + 맛집보러가기*/
+    display: flex;
+    justify-content: space-between;
+}
+
+#wrap-main {    /* 전체 div */
+    width: 100%;
 }
