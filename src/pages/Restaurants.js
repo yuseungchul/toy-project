@@ -13,7 +13,7 @@ function Restaurants() {
         <div>
             <h1>메뉴 목록 </h1>
             <Link to="./regist" >
-                <button className="inputRestaurantButton">가맹점 등록</button>
+                <button className="inputRestaurantButton">맛집등록</button>
             </Link>
             <RestaurantList/>
         </div>
