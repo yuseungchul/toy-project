@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Poor+Story&display=swap');
+
+body{
+  font-family: 'Gaegu', cursive;
+font-family: 'Poor Story', cursive;
+}
+
 .menuBox div {
   display: inline-block;
   margin: 5px;

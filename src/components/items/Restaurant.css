@@ -1,6 +1,6 @@
 .detailPage{
 
-    margin-top: 100px;
+    margin-top: 60px;
     margin-bottom: 100px;
 
 }
@@ -9,4 +9,58 @@
     background-color: white;
     border: 1px solid white;
     font-size: 30px;
+}
+
+.detailInfoleft{
+    
+    float: left;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+
+.detailInfoRight{ 
+   
+   display: inline-block;
+   margin-top: 160px;
+   margin-left: 20px;
+
+}
+
+.detailRestaurantNm{
+    font-size: 40px;
+    font: bold;
+  
+}
+
+.reviewIcon {
+
+    font-size: 30px;
+
+}
+
+
+.reviewButton {
+    
+    background-color: #E23D3D;
+    border: #E23D3D;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 150px;
+    margin-right: 0;
+ 
+  
+   
+}
+
+.reviewBox {
+
+    border: 2px solid #E23D3D;
+    margin-left: 40px;
+    width: 700px;
+    height: 100px;
+
+
+
+
 }

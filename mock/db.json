@@ -207,7 +207,7 @@
       "operationHour": "11:30~22:00",
       "phone": "0507-1478-8013",
       "isDelivery": "N",
-      "like": 1020,
+      "like": 120,
       "menu": "티본스테이크",
       "price": "3000원",
       "detail": {
@@ -225,7 +225,7 @@
       "operationHour": "11:30~22:00",
       "phone": "0507-1316-5067",
       "isDelivery": "N",
-      "like": 913,
+      "like": 675,
       "menu": "마르게리따",
       "price": "21000원",
       "detail": {
@@ -243,7 +243,7 @@
       "operationHour": "11:30~22:00",
       "phone": "02-533-5576",
       "isDelivery": "N",
-      "like": 1342,
+      "like": 167,
       "menu": "쉑버거",
       "price": "7,300원",
       "detail": {
@@ -261,7 +261,7 @@
       "operationHour": "11:30~22:00",
       "phone": "02-3452-1515",
       "isDelivery": "N",
-      "like": 1242,
+      "like": 842,
       "menu": "바비 스테이크",
       "price": "22,000원",
       "detail": {
@@ -279,7 +279,7 @@
       "operationHour": "11:00~22:00",
       "phone": "0507-1486-8700",
       "isDelivery": "N",
-      "like": 1042,
+      "like": 464,
       "menu": "포터하우스 스테이크",
       "price": "278,000원",
       "detail": {
