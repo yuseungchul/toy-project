@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import RestaurantCard from '../items/RestaurantCard';
-import { callGetRestaurantListAPI, callSortAPI } from "../../apis/RestaurantAPICalls";
+import { callGetRestaurantListAPI, callSortAPI, callLikeSortAPI } from "../../apis/RestaurantAPICalls";
 
 
 function RestaurantList() {
@@ -23,11 +23,15 @@ function RestaurantList() {
     const onClickHandler=()=>{
         dispatch(callSortAPI())
     }
+
+    const likelist=()=>{
+        dispatch(callLikeSortAPI())
+    }
     return (
         restaurantList && (
             <>
             <button onClick={onClickHandler}>이름순 정렬</button>
-            <button>좋아요 순 정렬</button>
+            <button onClick={likelist}>좋아요 순 정렬</button>
             <div className="menuBox">
                 { restaurantList.map(restaurant => <RestaurantCard key={ restaurant.id } restaurant={ restaurant }/>) }
             </div>
